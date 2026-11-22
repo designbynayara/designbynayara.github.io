@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nayara Hellen · Consultoria de Power BI e Fabric</title>
-<meta name="description" content="Consultoria de Power BI e Microsoft Fabric para times de dados. Conte sobre o seu projeto em cerca de 3 minutos.">
+<meta name="description" content="Consultoria de Power BI e Microsoft Fabric. Conte sobre o seu projeto em cerca de 3 minutos.">
 <meta property="og:title" content="Nayara Hellen · Consultoria de Power BI e Fabric">
-<meta property="og:description" content="Consultoria de Power BI e Microsoft Fabric para times de dados. Conte sobre o seu projeto em cerca de 3 minutos.">
+<meta property="og:description" content="Consultoria de Power BI e Microsoft Fabric. Conte sobre o seu projeto em cerca de 3 minutos.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap">
 <style>
@@ -85,12 +85,12 @@ section{scroll-margin-top:24px}
 .trabalho p{margin:6px 0 0;font-size:15px;color:var(--ink-700)}
 .link-mais{display:inline-block;margin-top:28px;font-weight:600;font-size:15px}
 .link-mais svg{width:16px;height:16px;display:inline;vertical-align:-2px;margin-left:6px}
-.grade-formatos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.grade-formatos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px}
 .formato{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px}
 .formato .num{font:600 13px/1 var(--font-body);letter-spacing:.14em;color:var(--violet-700)}
 .formato h3{margin:12px 0 0;font-size:18px;font-weight:600;line-height:1.3}
 .formato p{margin:8px 0 0;font-size:15px;color:var(--ink-700)}
-.formato.nota-card{background:var(--violet-50);border-color:var(--violet-100)}
+.formato.nota-card{grid-column:1/-1;background:var(--violet-50);border-color:var(--violet-100)}
 .formato.nota-card p{color:var(--ink-950);margin:0;font-size:15px}
 
 /* Formulário */
@@ -189,7 +189,7 @@ footer nav{display:flex;gap:20px}
   <div class="wrap">
     <div>
       <span class="eyebrow">Design by Nayara · Consultoria</span>
-      <h1 class="caixas"><span>Consultoria de</span><span>Power BI e Fabric</span><span>para times de dados</span></h1>
+      <h1 class="caixas"><span>Consultoria de</span><span>Power BI e Fabric</span></h1>
       <p class="lead">Sou Nayara Hellen, consultora especializada em Power BI e Microsoft Fabric. Apoio times de dados na criação e na melhoria de relatórios, na definição de padrões visuais e no uso mais eficiente da capacidade do Fabric.</p>
       <div class="acoes">
         <a class="btn btn-primario" href="#contato">Começar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -220,14 +220,13 @@ footer nav{display:flex;gap:20px}
 
 <section class="secao" id="formatos">
   <div class="wrap">
-    <span class="eyebrow">Formatos</span>
+    <span class="eyebrow">O que eu faço</span>
     <h2>Como posso ajudar</h2>
     <div class="grade-formatos">
-      <div class="formato"><span class="num">01</span><h3>Assessment de capacidade do Fabric</h3><p>Análise do consumo da capacidade e um plano do que otimizar primeiro nos relatórios, nos modelos e nas atualizações.</p></div>
-      <div class="formato"><span class="num">02</span><h3>Redesign ou relatório novo</h3><p>Do desenho à entrega, com validações do time em cada etapa.</p></div>
-      <div class="formato"><span class="num">03</span><h3>Padrão visual do time</h3><p>Tema, componentes e guia para todos os relatórios seguirem a mesma identidade.</p></div>
-      <div class="formato"><span class="num">04</span><h3>Suporte mensal</h3><p>Um pacote de horas por mês para ajustes, revisões e dúvidas técnicas.</p></div>
-      <div class="formato"><span class="num">05</span><h3>Alocação</h3><p>Uma pessoa sênior a mais no seu time por alguns meses.</p></div>
+      <div class="formato"><span class="num">01</span><h3>Design e UX de relatórios</h3><p>Pesquisa com quem usa, organização das páginas e desenho visual, do protótipo à entrega.</p></div>
+      <div class="formato"><span class="num">02</span><h3>Modelagem e DAX</h3><p>Modelo em estrela, medidas confiáveis e números que conferem com a fonte.</p></div>
+      <div class="formato"><span class="num">03</span><h3>Assessment de capacidade do Fabric</h3><p>Análise do consumo da capacidade e um plano do que otimizar primeiro nos relatórios, nos modelos e nas atualizações.</p></div>
+      <div class="formato"><span class="num">04</span><h3>Padrão visual do time</h3><p>Tema, componentes e guia para todos os relatórios seguirem a mesma identidade.</p></div>
       <div class="formato nota-card"><p>Todo trabalho é feito sob medida, com os dados e as perguntas da sua empresa. Não vendo modelo pronto de relatório e não dou cursos nem treinamentos.</p></div>
     </div>
   </div>
@@ -288,7 +287,7 @@ footer nav{display:flex;gap:20px}
         </div>
       </div>
       <div class="etapa" data-etapa="5">
-        <fieldset class="q" data-q="formato" data-obrigatoria="1" data-tipo="multipla_escolha"><legend class="q-titulo">Que tipo de ajuda você procura?</legend><p class="q-ajuda" id="q-formato-ajuda">Pode marcar mais de uma.</p><div class="opcoes"><label class="opcao"><input type="checkbox" name="formato" value="Assessment de capacidade do Fabric"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Assessment de capacidade do Fabric</span></label><label class="opcao"><input type="checkbox" name="formato" value="Redesign ou relatório novo"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Redesign ou relatório novo</span></label><label class="opcao"><input type="checkbox" name="formato" value="Padrão visual do time"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Padrão visual do time</span></label><label class="opcao"><input type="checkbox" name="formato" value="Suporte mensal"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Suporte mensal</span></label><label class="opcao"><input type="checkbox" name="formato" value="Alocação"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Alocação</span></label><label class="opcao"><input type="checkbox" name="formato" value="Ainda não sei"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Ainda não sei</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
+        <fieldset class="q" data-q="formato" data-obrigatoria="1" data-tipo="multipla_escolha"><legend class="q-titulo">Que tipo de ajuda você procura?</legend><p class="q-ajuda" id="q-formato-ajuda">Pode marcar mais de uma.</p><div class="opcoes"><label class="opcao"><input type="checkbox" name="formato" value="Design e UX de relatórios"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Design e UX de relatórios</span></label><label class="opcao"><input type="checkbox" name="formato" value="Modelagem e DAX"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Modelagem e DAX</span></label><label class="opcao"><input type="checkbox" name="formato" value="Assessment de capacidade do Fabric"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Assessment de capacidade do Fabric</span></label><label class="opcao"><input type="checkbox" name="formato" value="Padrão visual do time"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Padrão visual do time</span></label><label class="opcao"><input type="checkbox" name="formato" value="Ainda não sei"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Ainda não sei</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
         <div class="nav">
           <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
           <span class="dica">ou aperte Enter</span>

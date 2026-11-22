@@ -1,6 +1,6 @@
 {
   "titulo_aba": "Nayara Hellen · Consultoria de Power BI e Fabric",
-  "descricao": "Consultoria de Power BI e Microsoft Fabric para times de dados. Conte sobre o seu projeto em cerca de 3 minutos.",
+  "descricao": "Consultoria de Power BI e Microsoft Fabric. Conte sobre o seu projeto em cerca de 3 minutos.",
   "pessoa": {
     "nome": "Nayara Hellen",
     "arroba": "@designby_nayara",
@@ -16,8 +16,7 @@
   "abertura": {
     "linhas_titulo": [
       "Consultoria de",
-      "Power BI e Fabric",
-      "para times de dados"
+      "Power BI e Fabric"
     ],
     "texto": "Sou Nayara Hellen, consultora especializada em Power BI e Microsoft Fabric. Apoio times de dados na criação e na melhoria de relatórios, na definição de padrões visuais e no uso mais eficiente da capacidade do Fabric.",
     "botao": "Começar",
@@ -60,28 +59,24 @@
     "link_mais": "Ver mais relatórios na Comunidade do Microsoft Fabric"
   },
   "formatos": {
-    "etiqueta": "Formatos",
+    "etiqueta": "O que eu faço",
     "titulo": "Como posso ajudar",
     "itens": [
+      {
+        "nome": "Design e UX de relatórios",
+        "texto": "Pesquisa com quem usa, organização das páginas e desenho visual, do protótipo à entrega."
+      },
+      {
+        "nome": "Modelagem e DAX",
+        "texto": "Modelo em estrela, medidas confiáveis e números que conferem com a fonte."
+      },
       {
         "nome": "Assessment de capacidade do Fabric",
         "texto": "Análise do consumo da capacidade e um plano do que otimizar primeiro nos relatórios, nos modelos e nas atualizações."
       },
       {
-        "nome": "Redesign ou relatório novo",
-        "texto": "Do desenho à entrega, com validações do time em cada etapa."
-      },
-      {
         "nome": "Padrão visual do time",
         "texto": "Tema, componentes e guia para todos os relatórios seguirem a mesma identidade."
-      },
-      {
-        "nome": "Suporte mensal",
-        "texto": "Um pacote de horas por mês para ajustes, revisões e dúvidas técnicas."
-      },
-      {
-        "nome": "Alocação",
-        "texto": "Uma pessoa sênior a mais no seu time por alguns meses."
       }
     ],
     "nota": "Todo trabalho é feito sob medida, com os dados e as perguntas da sua empresa. Não vendo modelo pronto de relatório e não dou cursos nem treinamentos."
@@ -184,11 +179,10 @@
         "pergunta": "Que tipo de ajuda você procura?",
         "ajuda": "Pode marcar mais de uma.",
         "opcoes": [
+          "Design e UX de relatórios",
+          "Modelagem e DAX",
           "Assessment de capacidade do Fabric",
-          "Redesign ou relatório novo",
           "Padrão visual do time",
-          "Suporte mensal",
-          "Alocação",
           "Ainda não sei"
         ]
       },

@@ -89,12 +89,12 @@ section{scroll-margin-top:24px}
 .trabalho p{margin:6px 0 0;font-size:15px;color:var(--ink-700)}
 .link-mais{display:inline-block;margin-top:28px;font-weight:600;font-size:15px}
 .link-mais svg{width:16px;height:16px;display:inline;vertical-align:-2px;margin-left:6px}
-.grade-formatos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.grade-formatos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px}
 .formato{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px}
 .formato .num{font:600 13px/1 var(--font-body);letter-spacing:.14em;color:var(--violet-700)}
 .formato h3{margin:12px 0 0;font-size:18px;font-weight:600;line-height:1.3}
 .formato p{margin:8px 0 0;font-size:15px;color:var(--ink-700)}
-.formato.nota-card{background:var(--violet-50);border-color:var(--violet-100)}
+.formato.nota-card{grid-column:1/-1;background:var(--violet-50);border-color:var(--violet-100)}
 .formato.nota-card p{color:var(--ink-950);margin:0;font-size:15px}
 
 /* Formulário */
