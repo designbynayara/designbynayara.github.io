@@ -372,7 +372,7 @@ footer nav{display:flex;gap:20px}
   form.addEventListener('change', e => { const q = e.target.closest('.q'); if (q && q.classList.contains('invalida')) valida(q); });
   form.addEventListener('change', e => { if (e.target.type === 'file') { const n = e.target.closest('.arquivo').querySelector('[data-nome-arquivo]'); if (e.target.files[0]) n.textContent = e.target.files[0].name; } });
 
-  const ENVIO = {"url":"","campos":{},"enviando":"Enviando…","erro":"Não foi possível enviar agora. Verifique a sua conexão e tente de novo."};
+  const ENVIO = {"url":"https://docs.google.com/forms/d/e/1FAIpQLSdu9VUSS_laTCxlMgCdxg2xk4lmuHhf7_0gIJjqrpypJG3P1w/formResponse","campos":{"nome":"entry.1225199874","empresa":"entry.647437983","papel":"entry.709102153","time":"entry.423123254","fabric":"entry.582800042","formato":"entry.38990411","problema":"entry.1281961074","prazo":"entry.643665533","investimento":"entry.1094668572","contato":"entry.1103184358","origem":"entry.1044729451"},"enviando":"Enviando…","erro":"Não foi possível enviar agora. Verifique a sua conexão e tente de novo."};
   let enviando = false;
   function valor(id) {
     const els = [...form.querySelectorAll('[name="' + id + '"]')];

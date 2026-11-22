@@ -92,8 +92,20 @@
     "obrigatoria_msg": "Responda esta pergunta para continuar.",
     "envio": {
       "observacao": "As respostas vão para um Google Forms na conta dela. url é o endereço formResponse e campos liga cada pergunta ao entry do Google Forms. Com url vazia a página só mostra o fechamento, sem enviar.",
-      "url": "",
-      "campos": {},
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdu9VUSS_laTCxlMgCdxg2xk4lmuHhf7_0gIJjqrpypJG3P1w/formResponse",
+      "campos": {
+        "nome": "entry.1225199874",
+        "empresa": "entry.647437983",
+        "papel": "entry.709102153",
+        "time": "entry.423123254",
+        "fabric": "entry.582800042",
+        "formato": "entry.38990411",
+        "problema": "entry.1281961074",
+        "prazo": "entry.643665533",
+        "investimento": "entry.1094668572",
+        "contato": "entry.1103184358",
+        "origem": "entry.1044729451"
+      },
       "enviando": "Enviando…",
       "erro": "Não foi possível enviar agora. Verifique a sua conexão e tente de novo."
     },
