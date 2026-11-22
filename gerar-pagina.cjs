@@ -65,6 +65,11 @@ p{text-wrap:pretty}
 .caixas span:nth-child(2){background:var(--violet-700);color:#fff;margin-left:clamp(16px,3vw,44px)}
 .caixas span:nth-child(3){background:var(--ink-800);color:#fff;margin-left:clamp(8px,1.4vw,18px)}
 .abertura p.lead{margin:28px 0 0;font-size:18px;line-height:1.65;color:var(--ink-700);max-width:540px}
+.destaque{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:8px 12px;border:1px solid var(--violet-100);background:var(--violet-50);border-radius:4px;color:var(--violet-700);font-size:15px;font-weight:500;line-height:1.4;text-decoration:none;max-width:540px}
+.destaque:hover{border-color:var(--violet-200);color:var(--violet-700)}
+.destaque:focus-visible{outline:none;box-shadow:var(--focus)}
+.destaque svg{flex:none;width:20px;height:20px}
+.destaque svg:last-child{width:14px;height:14px}
 .acoes{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:32px}
 .acoes .nota{font-size:14px;color:var(--ink-600)}
 .vitrine{position:relative}
@@ -181,6 +186,7 @@ footer nav{display:flex;gap:20px}
 `;
 
 const ICO = {
+  trofeu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H5a1 1 0 0 0-1 1 3 3 0 0 0 3 3h1M16 6h3a1 1 0 0 1 1 1 3 3 0 0 1-3 3h-1"/><path d="M12 13v4M8.5 20h7M10 17h4"/></svg>',
   seta: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
   voltar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>',
   externo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
@@ -398,6 +404,7 @@ function pagina(opcao) {
       <span class="eyebrow">${esc(T.etiqueta)}</span>
       <h1 class="caixas">${A.linhas_titulo.map(l => `<span>${esc(l)}</span>`).join('')}</h1>
       <p class="lead">${esc(A.texto)}</p>
+      ${A.destaque ? `<a class="destaque" href="${esc(A.destaque.link)}" target="_blank" rel="noopener">${ICO.trofeu}<span>${esc(A.destaque.texto)}</span>${ICO.externo}</a>` : ''}
       <div class="acoes">
         <a class="btn btn-primario" href="#contato">${esc(A.botao)}${ICO.seta}</a>
         ${A.nota ? `<span class="nota">${esc(A.nota)}</span>` : ''}

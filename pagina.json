@@ -19,6 +19,10 @@
       "Power BI e Fabric"
     ],
     "texto": "Sou Nayara Hellen, consultora de Power BI com formação em UX Design e UX Research. Ajudo times de dados a criar e melhorar relatórios, definir padrões visuais, analisar o consumo da capacidade do Fabric e automatizar tarefas com o Power Automate.",
+    "destaque": {
+      "texto": "Campeã do Student Dataviz Contest do Fabric Data Days 2025, da Microsoft",
+      "link": "https://community.fabric.microsoft.com/blog/community_blog/%F0%9F%8F%86-announcing-the-finalists-of-the-fabric-data-days-student-dataviz-contest/4892300"
+    },
     "botao": "Começar",
     "nota": ""
   },
@@ -54,54 +58,6 @@
         "imagem": "imagens/veredas-energia.webp",
         "alt": "Visão geral de um relatório de usinas solares, com energia gerada por mês e perdas por usina",
         "link": "https://community.fabric.microsoft.com/discussions/datastoriesgallery/veredas-energia-central-de-opera%C3%A7%C3%B5es-solares/5419718"
-      },
-      {
-        "nome": "Vendas de floricultura",
-        "texto": "Faturamento, pedidos por canal e vendas por categoria.",
-        "imagem": "imagens/folha-viva.webp",
-        "alt": "Visão geral de um relatório de floricultura, com faturamento por mês, pedidos por canal e uma ilustração de florista"
-      },
-      {
-        "nome": "Operação de entregas",
-        "texto": "Entregas no prazo, atrasos por causa e ocupação da frota.",
-        "imagem": "imagens/atalho-logistica.webp",
-        "alt": "Visão geral de um relatório de logística, com um caminhão mostrando o prazo de entrega por estado e gráficos de atraso"
-      },
-      {
-        "nome": "Margem de uma doceria",
-        "texto": "Receita, margem bruta contra a meta e vendas por canal.",
-        "imagem": "imagens/painel-confete.webp",
-        "alt": "Visão geral de um relatório de doceria, com receita por mês, margem bruta contra a meta e receita por canal"
-      },
-      {
-        "nome": "Mídia paga de turismo",
-        "texto": "Investimento, receita atribuída e retorno por canal e campanha.",
-        "imagem": "imagens/aurora-viagens.webp",
-        "alt": "Visão geral de um relatório de mídia paga, com investimento, receita atribuída e retorno por canal"
-      },
-      {
-        "nome": "Rede de pousadas",
-        "texto": "Receita por origem, ocupação e diária média por unidade.",
-        "imagem": "imagens/casa-duna.webp",
-        "alt": "Visão geral de um relatório de pousadas, com receita por mês e origem, receita por unidade e ocupação por dia"
-      },
-      {
-        "nome": "DRE gerencial",
-        "texto": "Resultado do mês, orçado contra realizado e centros de custo.",
-        "imagem": "imagens/painel-dre.webp",
-        "alt": "Visão geral de um relatório de DRE, com receita líquida por mês contra o orçado e a composição do lucro"
-      },
-      {
-        "nome": "Acompanhamento de cargas",
-        "texto": "Contêineres a caminho, chegadas ao porto e pontualidade de entrega.",
-        "imagem": "imagens/planalto-conteineres-v2.webp",
-        "alt": "Visão geral de um relatório de cargas, com contêineres a bordo, chegadas por semana e pontualidade por mês"
-      },
-      {
-        "nome": "Rematrícula escolar",
-        "texto": "Rematrículas por segmento, confirmações e alunos em risco de evasão.",
-        "imagem": "imagens/colegio-raizes-v2.webp",
-        "alt": "Visão geral de um relatório escolar, com rematrículas por segmento, confirmações por semana e alunos em risco"
       }
     ],
     "link_mais": "Ver mais relatórios na Comunidade do Microsoft Fabric"
