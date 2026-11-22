@@ -80,7 +80,8 @@ section{scroll-margin-top:24px}
 .secao h2{margin:14px 0 0;font-weight:700;font-size:clamp(28px,3.4vw,38px);line-height:1.12;letter-spacing:-.015em}
 .secao .sub{margin:12px 0 0;color:var(--ink-700);font-size:17px;max-width:620px}
 .trabalhos{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.grade-trabalhos{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}
+.grade-trabalhos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+@media (max-width:980px){.grade-trabalhos{grid-template-columns:repeat(2,1fr)}}
 .trabalho{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
 .trabalho:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);color:inherit}
 .trabalho img{width:100%;height:auto;aspect-ratio:1280/860;object-fit:cover;object-position:top;border-bottom:1px solid var(--line);background:var(--cloud)}
@@ -91,6 +92,7 @@ section{scroll-margin-top:24px}
 .link-mais svg{width:16px;height:16px;display:inline;vertical-align:-2px;margin-left:6px}
 .grade-formatos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px}
 .formato{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px}
+.grade-formatos .formato:nth-child(odd):nth-last-child(2){grid-column:1/-1}
 .formato .num{font:600 13px/1 var(--font-body);letter-spacing:.14em;color:var(--violet-700)}
 .formato h3{margin:12px 0 0;font-size:18px;font-weight:600;line-height:1.3}
 .formato p{margin:8px 0 0;font-size:15px;color:var(--ink-700)}
@@ -398,7 +400,7 @@ function pagina(opcao) {
       <p class="lead">${esc(A.texto)}</p>
       <div class="acoes">
         <a class="btn btn-primario" href="#contato">${esc(A.botao)}${ICO.seta}</a>
-        <span class="nota">${esc(A.nota)}</span>
+        ${A.nota ? `<span class="nota">${esc(A.nota)}</span>` : ''}
       </div>
     </div>
     <div class="vitrine" aria-hidden="true">
@@ -414,7 +416,7 @@ function pagina(opcao) {
     <h2>${esc(W.titulo)}</h2>
     <p class="sub">${esc(W.texto)}</p>
     <div class="grade-trabalhos">
-      ${W.itens.map(t => `<a class="trabalho" href="${esc(t.link)}" target="_blank" rel="noopener"><img src="${esc(t.imagem)}" alt="${esc(t.alt)}" width="1280" height="860"><div class="info"><h3>${esc(t.nome)}</h3><p>${esc(t.texto)}</p></div></a>`).join('\n      ')}
+      ${W.itens.map(t => `<a class="trabalho" href="${esc(t.link || t.imagem)}" target="_blank" rel="noopener"><img src="${esc(t.imagem)}" alt="${esc(t.alt)}" width="1280" height="860"><div class="info"><h3>${esc(t.nome)}</h3><p>${esc(t.texto)}</p></div></a>`).join('\n      ')}
     </div>
     <a class="link-mais" href="${esc(P.comunidade)}" target="_blank" rel="noopener">${esc(W.link_mais)}${ICO.externo}</a>
   </div>
