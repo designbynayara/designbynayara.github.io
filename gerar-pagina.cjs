@@ -348,10 +348,6 @@ const JS = `
         if (i < etapas.length - 1) avanca(); else form.requestSubmit();
       }
     });
-    // Escolha única avança sozinha, depois de um instante para a pessoa ver a marcação
-    form.addEventListener('change', e => {
-      if (e.target.type === 'radio' && i < etapas.length - 1) setTimeout(avanca, 280);
-    });
     form.addEventListener('submit', e => { e.preventDefault(); const q = etapas[i].querySelector('.q'); if (valida(q)) { barra.style.width = '100%'; concluir(); } });
     barra.style.width = '0%';
   } else {
