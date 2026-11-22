@@ -97,7 +97,7 @@ section{scroll-margin-top:24px}
 .link-mais svg{width:16px;height:16px;display:inline;vertical-align:-2px;margin-left:6px}
 .grade-formatos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px}
 .formato{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px}
-.grade-formatos .formato:nth-child(odd):nth-last-child(2){grid-column:1/-1}
+.grade-formatos .formato:nth-child(odd):nth-last-child(2):has(+ .nota-card),.grade-formatos .formato:nth-child(odd):last-child:not(.nota-card){grid-column:1/-1}
 .formato .num{font:600 13px/1 var(--font-body);letter-spacing:.14em;color:var(--violet-700)}
 .formato h3{margin:12px 0 0;font-size:18px;font-weight:600;line-height:1.3}
 .formato p{margin:8px 0 0;font-size:15px;color:var(--ink-700)}
@@ -435,7 +435,7 @@ function pagina(opcao) {
     <h2>${esc(Fo.titulo)}</h2>
     <div class="grade-formatos">
       ${Fo.itens.map((f, i) => `<div class="formato"><span class="num">${String(i + 1).padStart(2, '0')}</span><h3>${esc(f.nome)}</h3><p>${esc(f.texto)}</p></div>`).join('\n      ')}
-      <div class="formato nota-card"><p>${esc(Fo.nota)}</p></div>
+      ${Fo.nota ? `<div class="formato nota-card"><p>${esc(Fo.nota)}</p></div>` : ''}
     </div>
   </div>
 </section>
