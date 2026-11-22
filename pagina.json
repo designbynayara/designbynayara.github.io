@@ -58,6 +58,20 @@
         "imagem": "imagens/veredas-energia.webp",
         "alt": "Visão geral de um relatório de usinas solares, com energia gerada por mês e perdas por usina",
         "link": "https://community.fabric.microsoft.com/discussions/datastoriesgallery/veredas-energia-central-de-opera%C3%A7%C3%B5es-solares/5419718"
+      },
+      {
+        "nome": "Carteira de clientes de software",
+        "texto": "Receita recorrente, saúde das contas e renovações.",
+        "imagem": "imagens/nuvem-alta.webp",
+        "alt": "Visão geral de um relatório de carteira de clientes B2B, com receita recorrente, contas ativas, índice de saúde e a lista de contas",
+        "link": "https://community.fabric.microsoft.com/discussions/DataStoriesGallery/nuvem-alta-carteira-de-clientes-de-software-b2b/5419717"
+      },
+      {
+        "nome": "Gestão de clientes de logística",
+        "texto": "Receita por cliente, nível de serviço e retenção da carteira.",
+        "imagem": "imagens/gestao-de-clientes.webp",
+        "alt": "Visão geral de um relatório de clientes de uma transportadora, com receita por cliente, nível de serviço e clientes por porte",
+        "link": "https://community.fabric.microsoft.com/discussions/DataStoriesGallery/gest%C3%A3o-de-clientes-carteira-de-uma-opera%C3%A7%C3%A3o-de-log%C3%ADstica/5419716"
       }
     ],
     "link_mais": "Ver mais relatórios na Comunidade do Microsoft Fabric"
