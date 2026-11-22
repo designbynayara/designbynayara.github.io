@@ -122,6 +122,7 @@ textarea.campo{min-height:132px;resize:vertical}
 .opcao:has(input:focus-visible){box-shadow:var(--focus)}
 .form-sec .wrap>*,.abertura .wrap>*{min-width:0}
 .opcao span:last-child{overflow-wrap:anywhere}
+.erro-envio{margin:16px 0 0;color:var(--danger-500);font-size:15px;font-weight:500}
 .arquivo{margin-top:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px;border:1px dashed var(--line-strong);border-radius:6px;color:var(--ink-700);font-size:15px}
 .arquivo input{position:absolute;width:1px;height:1px;opacity:0}
 .arquivo .btn{padding:10px 16px;font-size:15px}
@@ -193,7 +194,7 @@ footer nav{display:flex;gap:20px}
       <p class="lead">Sou Nayara Hellen, consultora especializada em Power BI e Microsoft Fabric. Apoio times de dados na criação e na melhoria de relatórios, na definição de padrões visuais e no uso mais eficiente da capacidade do Fabric.</p>
       <div class="acoes">
         <a class="btn btn-primario" href="#contato">Começar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <span class="nota">12 perguntas · cerca de 3 minutos</span>
+        <span class="nota">11 perguntas · cerca de 3 minutos</span>
       </div>
     </div>
     <div class="vitrine" aria-hidden="true">
@@ -237,13 +238,13 @@ footer nav{display:flex;gap:20px}
     <div class="lado">
       <span class="eyebrow">Contato</span>
       <h2 style="margin:14px 0 0;font-weight:700;font-size:clamp(28px,3.4vw,38px);line-height:1.12;letter-spacing:-.015em">Conte sobre o seu projeto</h2>
-      <p class="sub" style="margin:12px 0 0;color:var(--ink-700);font-size:17px">São 12 perguntas, que levam cerca de 3 minutos. As respostas me ajudam a entender o seu cenário antes da nossa conversa, para que ela seja mais objetiva.</p>
+      <p class="sub" style="margin:12px 0 0;color:var(--ink-700);font-size:17px">São 11 perguntas, que levam cerca de 3 minutos. As respostas me ajudam a entender o seu cenário antes da nossa conversa, para que ela seja mais objetiva.</p>
     </div>
     
     <div class="cartao" data-modo="A">
       <div class="cabeca-form">
         <div class="progresso" aria-hidden="true"><i></i></div>
-        <p class="contador" aria-live="polite"><span data-atual>1</span> de 12</p>
+        <p class="contador" aria-live="polite"><span data-atual>1</span> de 11</p>
       </div>
       <form novalidate data-form>
       <div class="etapa ativa" data-etapa="0">
@@ -319,14 +320,6 @@ footer nav{display:flex;gap:20px}
         </div>
       </div>
       <div class="etapa" data-etapa="9">
-        <div class="q" data-q="print" data-obrigatoria="0" data-tipo="arquivo"><label class="q-titulo" for="q-print-in">Quer mandar um print de algum relatório atual?<span class="opc">Opcional</span></label><p class="q-ajuda" id="q-print-ajuda">Totalmente opcional. Se preferir, borre os números e os nomes antes de enviar.</p><label class="arquivo"><input id="q-print-in" name="print" type="file" accept="image/*,.pdf" aria-describedby="q-print-ajuda"><span class="btn btn-secundario">Escolher arquivo</span><span data-nome-arquivo>Imagem ou PDF, até 10 MB</span></label><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
-        <div class="nav">
-          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
-          <span class="dica">ou aperte Enter</span>
-          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        </div>
-      </div>
-      <div class="etapa" data-etapa="10">
         <div class="q" data-q="contato" data-obrigatoria="1" data-tipo="texto_curto"><label class="q-titulo" for="q-contato-in">Qual o melhor e-mail ou WhatsApp para eu falar com você?</label><input class="campo" id="q-contato-in" name="contato" type="text" autocomplete="on" required><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
         <div class="nav">
           <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
@@ -334,7 +327,7 @@ footer nav{display:flex;gap:20px}
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
-      <div class="etapa" data-etapa="11">
+      <div class="etapa" data-etapa="10">
         <fieldset class="q" data-q="origem" data-obrigatoria="0" data-tipo="escolha_unica"><legend class="q-titulo">Como você conheceu o meu trabalho?<span class="opc">Opcional</span></legend><div class="opcoes"><label class="opcao"><input type="radio" name="origem" value="Instagram"><span class="tecla" aria-hidden="true">A</span><span>Instagram</span></label><label class="opcao"><input type="radio" name="origem" value="LinkedIn"><span class="tecla" aria-hidden="true">B</span><span>LinkedIn</span></label><label class="opcao"><input type="radio" name="origem" value="Indicação"><span class="tecla" aria-hidden="true">C</span><span>Indicação</span></label><label class="opcao"><input type="radio" name="origem" value="Comunidade do Microsoft Fabric"><span class="tecla" aria-hidden="true">D</span><span>Comunidade do Microsoft Fabric</span></label><label class="opcao"><input type="radio" name="origem" value="Outro"><span class="tecla" aria-hidden="true">E</span><span>Outro</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
         <div class="nav">
           <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
@@ -342,6 +335,7 @@ footer nav{display:flex;gap:20px}
           <button type="submit" class="btn btn-primario">Enviar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
+        <p class="erro-envio" data-erro-envio role="alert" hidden>Não foi possível enviar agora. Verifique a sua conexão e tente de novo.</p>
       </form>
       <div class="fim" data-fim tabindex="-1"><div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h3>Recebi as suas respostas!</h3><p>Em até dois dias úteis eu volto pelo contato que você deixou, com sugestões de horário para a nossa conversa de 30 minutos, sem custo.</p></div>
     </div>
@@ -378,8 +372,36 @@ footer nav{display:flex;gap:20px}
   form.addEventListener('change', e => { const q = e.target.closest('.q'); if (q && q.classList.contains('invalida')) valida(q); });
   form.addEventListener('change', e => { if (e.target.type === 'file') { const n = e.target.closest('.arquivo').querySelector('[data-nome-arquivo]'); if (e.target.files[0]) n.textContent = e.target.files[0].name; } });
 
-  function concluir() {
-    // Aqui entra o envio de verdade na integração. Na prévia, só mostra o fechamento.
+  const ENVIO = {"url":"","campos":{},"enviando":"Enviando…","erro":"Não foi possível enviar agora. Verifique a sua conexão e tente de novo."};
+  let enviando = false;
+  function valor(id) {
+    const els = [...form.querySelectorAll('[name="' + id + '"]')];
+    if (!els.length) return '';
+    if (els[0].type === 'radio' || els[0].type === 'checkbox') return els.filter(e => e.checked).map(e => e.value).join(', ');
+    return els[0].value.trim();
+  }
+  async function concluir() {
+    if (enviando) return;
+    const erro = form.querySelector('[data-erro-envio]');
+    const botao = form.querySelector('button[type="submit"]');
+    if (ENVIO.url) {
+      enviando = true;
+      erro.hidden = true;
+      const rotulo = botao.innerHTML;
+      botao.disabled = true;
+      botao.textContent = ENVIO.enviando;
+      const dados = new URLSearchParams();
+      Object.entries(ENVIO.campos).forEach(([id, entry]) => dados.append(entry, valor(id)));
+      try {
+        await fetch(ENVIO.url, { method: 'POST', mode: 'no-cors', body: dados });
+      } catch (e) {
+        botao.disabled = false;
+        botao.innerHTML = rotulo;
+        erro.hidden = false;
+        enviando = false;
+        return;
+      }
+    }
     form.style.display = 'none';
     const cab = cartao.querySelector('.cabeca-form'); if (cab) cab.style.display = 'none';
     fim.classList.add('ativa');

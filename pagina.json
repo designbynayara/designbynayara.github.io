@@ -20,7 +20,7 @@
     ],
     "texto": "Sou Nayara Hellen, consultora especializada em Power BI e Microsoft Fabric. Apoio times de dados na criação e na melhoria de relatórios, na definição de padrões visuais e no uso mais eficiente da capacidade do Fabric.",
     "botao": "Começar",
-    "nota": "12 perguntas · cerca de 3 minutos"
+    "nota": "11 perguntas · cerca de 3 minutos"
   },
   "trabalhos": {
     "etiqueta": "Portfólio",
@@ -84,12 +84,19 @@
   "formulario": {
     "etiqueta": "Contato",
     "titulo": "Conte sobre o seu projeto",
-    "texto": "São 12 perguntas, que levam cerca de 3 minutos. As respostas me ajudam a entender o seu cenário antes da nossa conversa, para que ela seja mais objetiva.",
+    "texto": "São 11 perguntas, que levam cerca de 3 minutos. As respostas me ajudam a entender o seu cenário antes da nossa conversa, para que ela seja mais objetiva.",
     "botao_avancar": "Continuar",
     "botao_voltar": "Voltar",
     "botao_enviar": "Enviar",
     "opcional": "Opcional",
     "obrigatoria_msg": "Responda esta pergunta para continuar.",
+    "envio": {
+      "observacao": "As respostas vão para um Google Forms na conta dela. url é o endereço formResponse e campos liga cada pergunta ao entry do Google Forms. Com url vazia a página só mostra o fechamento, sem enviar.",
+      "url": "",
+      "campos": {},
+      "enviando": "Enviando…",
+      "erro": "Não foi possível enviar agora. Verifique a sua conexão e tente de novo."
+    },
     "grupos": [
       {
         "titulo": "Sobre você",
@@ -112,8 +119,7 @@
           "formato",
           "problema",
           "prazo",
-          "investimento",
-          "print"
+          "investimento"
         ]
       },
       {
@@ -217,15 +223,6 @@
           "Acima de R$ 30 mil",
           "Ainda não temos orçamento definido"
         ]
-      },
-      {
-        "id": "print",
-        "tipo": "arquivo",
-        "obrigatoria": false,
-        "pergunta": "Quer mandar um print de algum relatório atual?",
-        "ajuda": "Totalmente opcional. Se preferir, borre os números e os nomes antes de enviar.",
-        "rotulo_arquivo": "Escolher arquivo",
-        "sem_arquivo": "Imagem ou PDF, até 10 MB"
       },
       {
         "id": "contato",

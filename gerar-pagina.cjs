@@ -126,6 +126,7 @@ textarea.campo{min-height:132px;resize:vertical}
 .opcao:has(input:focus-visible){box-shadow:var(--focus)}
 .form-sec .wrap>*,.abertura .wrap>*{min-width:0}
 .opcao span:last-child{overflow-wrap:anywhere}
+.erro-envio{margin:16px 0 0;color:var(--danger-500);font-size:15px;font-weight:500}
 .arquivo{margin-top:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px;border:1px dashed var(--line-strong);border-radius:6px;color:var(--ink-700);font-size:15px}
 .arquivo input{position:absolute;width:1px;height:1px;opacity:0}
 .arquivo .btn{padding:10px 16px;font-size:15px}
@@ -234,6 +235,7 @@ function formularioA() {
         <p class="contador" aria-live="polite"><span data-atual>1</span> de ${total}</p>
       </div>
       <form novalidate data-form>${etapas}
+        <p class="erro-envio" data-erro-envio role="alert" hidden>${esc(F.envio.erro)}</p>
       </form>
       ${fim()}
     </div>`;
@@ -251,6 +253,7 @@ function formularioB() {
     <div class="cartao" data-modo="B">
       <form novalidate data-form>${grupos}
         <div class="nav"><span></span><button type="submit" class="btn btn-primario">${esc(F.botao_enviar)}${ICO.seta}</button></div>
+        <p class="erro-envio" data-erro-envio role="alert" hidden>${esc(F.envio.erro)}</p>
       </form>
       ${fim()}
     </div>`;
@@ -284,8 +287,36 @@ const JS = `
   form.addEventListener('change', e => { const q = e.target.closest('.q'); if (q && q.classList.contains('invalida')) valida(q); });
   form.addEventListener('change', e => { if (e.target.type === 'file') { const n = e.target.closest('.arquivo').querySelector('[data-nome-arquivo]'); if (e.target.files[0]) n.textContent = e.target.files[0].name; } });
 
-  function concluir() {
-    // Aqui entra o envio de verdade na integração. Na prévia, só mostra o fechamento.
+  const ENVIO = ${JSON.stringify((({ url, campos, enviando, erro }) => ({ url, campos, enviando, erro }))(C.formulario.envio))};
+  let enviando = false;
+  function valor(id) {
+    const els = [...form.querySelectorAll('[name="' + id + '"]')];
+    if (!els.length) return '';
+    if (els[0].type === 'radio' || els[0].type === 'checkbox') return els.filter(e => e.checked).map(e => e.value).join(', ');
+    return els[0].value.trim();
+  }
+  async function concluir() {
+    if (enviando) return;
+    const erro = form.querySelector('[data-erro-envio]');
+    const botao = form.querySelector('button[type="submit"]');
+    if (ENVIO.url) {
+      enviando = true;
+      erro.hidden = true;
+      const rotulo = botao.innerHTML;
+      botao.disabled = true;
+      botao.textContent = ENVIO.enviando;
+      const dados = new URLSearchParams();
+      Object.entries(ENVIO.campos).forEach(([id, entry]) => dados.append(entry, valor(id)));
+      try {
+        await fetch(ENVIO.url, { method: 'POST', mode: 'no-cors', body: dados });
+      } catch (e) {
+        botao.disabled = false;
+        botao.innerHTML = rotulo;
+        erro.hidden = false;
+        enviando = false;
+        return;
+      }
+    }
     form.style.display = 'none';
     const cab = cartao.querySelector('.cabeca-form'); if (cab) cab.style.display = 'none';
     fim.classList.add('ativa');
