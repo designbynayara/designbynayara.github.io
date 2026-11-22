@@ -1,0 +1,274 @@
+{
+  "titulo_aba": "Nayara Hellen · Consultoria de Power BI e Fabric",
+  "descricao": "Consultoria de Power BI e Microsoft Fabric para times de dados. Conte sobre o seu projeto em cerca de 3 minutos.",
+  "pessoa": {
+    "nome": "Nayara Hellen",
+    "arroba": "@designby_nayara",
+    "avatar": "imagens/avatar.webp",
+    "selo": "imagens/verified-badge.png",
+    "instagram": "https://www.instagram.com/designby_nayara/",
+    "comunidade": "https://community.fabric.microsoft.com/users/nayarahellen/1264092"
+  },
+  "topo": {
+    "etiqueta": "Design by Nayara · Consultoria",
+    "botao": "Falar sobre um projeto"
+  },
+  "abertura": {
+    "linhas_titulo": [
+      "Consultoria de",
+      "Power BI e Fabric",
+      "para times de dados"
+    ],
+    "texto": "Sou Nayara Hellen, consultora especializada em Power BI e Microsoft Fabric. Apoio times de dados na criação e na melhoria de relatórios, na definição de padrões visuais e no uso mais eficiente da capacidade do Fabric.",
+    "botao": "Começar",
+    "nota": "12 perguntas · cerca de 3 minutos"
+  },
+  "trabalhos": {
+    "etiqueta": "Portfólio",
+    "titulo": "Relatórios selecionados",
+    "texto": "Todos os relatórios abaixo usam dados fictícios.",
+    "itens": [
+      {
+        "nome": "Assinaturas de café especial",
+        "texto": "Receita recorrente, assinantes e cancelamentos mês a mês.",
+        "imagem": "imagens/grao-raro.webp",
+        "alt": "Visão geral de um relatório de assinaturas de café, com cartões de receita e assinantes e gráficos por mês",
+        "link": "https://community.fabric.microsoft.com/discussions/datastoriesgallery/gr%C3%A3o-raro-assinaturas-de-caf%C3%A9-especial/5374430"
+      },
+      {
+        "nome": "Operação de pronto-socorro",
+        "texto": "Fluxo de pacientes, triagem e simulador de plantão.",
+        "imagem": "imagens/pronto-socorro.webp",
+        "alt": "Visão geral de um relatório de pronto-socorro, com atendimentos por mês, por unidade e por classificação de risco",
+        "link": "https://community.fabric.microsoft.com/discussions/datastoriesgallery/emergency-department-operations-patient-flow-triage-and-a-shift-staffing-simulat/5372775"
+      },
+      {
+        "nome": "Gestão de pessoas",
+        "texto": "Quadro ativo, movimentação e folha de pagamento.",
+        "imagem": "imagens/gestao-de-pessoas.webp",
+        "alt": "Visão geral de um relatório de RH, com admissões, desligamentos e turnover por diretoria",
+        "link": "https://community.fabric.microsoft.com/discussions/datastoriesgallery/gest%C3%A3o-de-pessoas/5369221"
+      },
+      {
+        "nome": "Central de operações solares",
+        "texto": "Geração, disponibilidade e perdas de energia por usina.",
+        "imagem": "imagens/veredas-energia.webp",
+        "alt": "Visão geral de um relatório de usinas solares, com energia gerada por mês e perdas por usina",
+        "link": "https://community.fabric.microsoft.com/discussions/datastoriesgallery/veredas-energia-central-de-opera%C3%A7%C3%B5es-solares/5419718"
+      }
+    ],
+    "link_mais": "Ver mais relatórios na Comunidade do Microsoft Fabric"
+  },
+  "formatos": {
+    "etiqueta": "Formatos",
+    "titulo": "Como posso ajudar",
+    "itens": [
+      {
+        "nome": "Assessment de capacidade do Fabric",
+        "texto": "Análise do consumo da capacidade e um plano do que otimizar primeiro nos relatórios, nos modelos e nas atualizações."
+      },
+      {
+        "nome": "Redesign ou relatório novo",
+        "texto": "Do desenho à entrega, com validações do time em cada etapa."
+      },
+      {
+        "nome": "Padrão visual do time",
+        "texto": "Tema, componentes e guia para todos os relatórios seguirem a mesma identidade."
+      },
+      {
+        "nome": "Suporte mensal",
+        "texto": "Um pacote de horas por mês para ajustes, revisões e dúvidas técnicas."
+      },
+      {
+        "nome": "Alocação",
+        "texto": "Uma pessoa sênior a mais no seu time por alguns meses."
+      }
+    ],
+    "nota": "Todo trabalho é feito sob medida, com os dados e as perguntas da sua empresa. Não vendo modelo pronto de relatório e não dou cursos nem treinamentos."
+  },
+  "formulario": {
+    "etiqueta": "Contato",
+    "titulo": "Conte sobre o seu projeto",
+    "texto": "São 12 perguntas, que levam cerca de 3 minutos. As respostas me ajudam a entender o seu cenário antes da nossa conversa, para que ela seja mais objetiva.",
+    "botao_avancar": "Continuar",
+    "botao_voltar": "Voltar",
+    "botao_enviar": "Enviar",
+    "opcional": "Opcional",
+    "obrigatoria_msg": "Responda esta pergunta para continuar.",
+    "grupos": [
+      {
+        "titulo": "Sobre você",
+        "perguntas": [
+          "nome",
+          "empresa",
+          "papel"
+        ]
+      },
+      {
+        "titulo": "Sobre o time",
+        "perguntas": [
+          "time",
+          "fabric"
+        ]
+      },
+      {
+        "titulo": "Sobre o projeto",
+        "perguntas": [
+          "formato",
+          "problema",
+          "prazo",
+          "investimento",
+          "print"
+        ]
+      },
+      {
+        "titulo": "Seu contato",
+        "perguntas": [
+          "contato",
+          "origem"
+        ]
+      }
+    ],
+    "perguntas": [
+      {
+        "id": "nome",
+        "tipo": "texto_curto",
+        "obrigatoria": true,
+        "pergunta": "Qual o seu nome?"
+      },
+      {
+        "id": "empresa",
+        "tipo": "texto_curto",
+        "obrigatoria": true,
+        "pergunta": "Em qual empresa você trabalha?"
+      },
+      {
+        "id": "papel",
+        "tipo": "escolha_unica",
+        "obrigatoria": true,
+        "pergunta": "Qual o seu papel na empresa?",
+        "opcoes": [
+          "Gerente ou coordenador de dados",
+          "Analista",
+          "Dono ou diretor",
+          "Outro"
+        ]
+      },
+      {
+        "id": "time",
+        "tipo": "escolha_unica",
+        "obrigatoria": true,
+        "pergunta": "Quantas pessoas trabalham com dados no seu time?",
+        "opcoes": [
+          "Ainda não temos",
+          "1 a 2",
+          "3 a 10",
+          "Mais de 10"
+        ]
+      },
+      {
+        "id": "fabric",
+        "tipo": "escolha_unica",
+        "obrigatoria": true,
+        "pergunta": "Como vocês usam o Power BI hoje?",
+        "opcoes": [
+          "Com capacidade do Fabric",
+          "Só com licença Pro ou PPU",
+          "Não sei dizer"
+        ]
+      },
+      {
+        "id": "formato",
+        "tipo": "multipla_escolha",
+        "obrigatoria": true,
+        "pergunta": "Que tipo de ajuda você procura?",
+        "ajuda": "Pode marcar mais de uma.",
+        "opcoes": [
+          "Assessment de capacidade do Fabric",
+          "Redesign ou relatório novo",
+          "Padrão visual do time",
+          "Suporte mensal",
+          "Alocação",
+          "Ainda não sei"
+        ]
+      },
+      {
+        "id": "problema",
+        "tipo": "texto_longo",
+        "obrigatoria": true,
+        "pergunta": "Me conta um pouco do problema.",
+        "ajuda": "O que acontece hoje e o que você gostaria que mudasse?"
+      },
+      {
+        "id": "prazo",
+        "tipo": "escolha_unica",
+        "obrigatoria": true,
+        "pergunta": "Para quando você precisa?",
+        "opcoes": [
+          "Este mês",
+          "Nos próximos 3 meses",
+          "Ainda estou pesquisando"
+        ]
+      },
+      {
+        "id": "investimento",
+        "tipo": "escolha_unica",
+        "obrigatoria": true,
+        "pergunta": "Qual o investimento previsto para este projeto?",
+        "ajuda": "Serve para eu sugerir o formato que cabe no seu momento.",
+        "opcoes": [
+          "Até R$ 3 mil",
+          "De R$ 3 mil a R$ 10 mil",
+          "De R$ 10 mil a R$ 30 mil",
+          "Acima de R$ 30 mil",
+          "Ainda não temos orçamento definido"
+        ]
+      },
+      {
+        "id": "print",
+        "tipo": "arquivo",
+        "obrigatoria": false,
+        "pergunta": "Quer mandar um print de algum relatório atual?",
+        "ajuda": "Totalmente opcional. Se preferir, borre os números e os nomes antes de enviar.",
+        "rotulo_arquivo": "Escolher arquivo",
+        "sem_arquivo": "Imagem ou PDF, até 10 MB"
+      },
+      {
+        "id": "contato",
+        "tipo": "texto_curto",
+        "obrigatoria": true,
+        "pergunta": "Qual o melhor e-mail ou WhatsApp para eu falar com você?"
+      },
+      {
+        "id": "origem",
+        "tipo": "escolha_unica",
+        "obrigatoria": false,
+        "pergunta": "Como você conheceu o meu trabalho?",
+        "opcoes": [
+          "Instagram",
+          "LinkedIn",
+          "Indicação",
+          "Comunidade do Microsoft Fabric",
+          "Outro"
+        ]
+      }
+    ],
+    "fechamento": {
+      "titulo": "Recebi as suas respostas!",
+      "texto": "Em até dois dias úteis eu volto pelo contato que você deixou, com sugestões de horário para a nossa conversa de 30 minutos, sem custo."
+    }
+  },
+  "rodape": {
+    "texto": "Nayara Hellen · Consultoria de Power BI e Microsoft Fabric",
+    "links": [
+      {
+        "texto": "Instagram",
+        "url": "https://www.instagram.com/designby_nayara/"
+      },
+      {
+        "texto": "Comunidade do Microsoft Fabric",
+        "url": "https://community.fabric.microsoft.com/users/nayarahellen/1264092"
+      }
+    ]
+  }
+}

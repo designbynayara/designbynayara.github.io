@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nayara Hellen · Consultoria de Power BI e Fabric</title>
+<meta name="description" content="Consultoria de Power BI e Microsoft Fabric para times de dados. Conte sobre o seu projeto em cerca de 3 minutos.">
+<meta property="og:title" content="Nayara Hellen · Consultoria de Power BI e Fabric">
+<meta property="og:description" content="Consultoria de Power BI e Microsoft Fabric para times de dados. Conte sobre o seu projeto em cerca de 3 minutos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap">
+<style>
+:root{
+  --violet-50:#F8F0FE;--violet-100:#EEDCFD;--violet-400:#AE50F2;--violet-600:#852DD9;--violet-700:#6B21B6;--violet-800:#52208A;
+  --magenta-500:#FB1FAA;--magenta-700:#A00C69;
+  --ink-950:#04020F;--ink-800:#211E2B;--ink-700:#3A3743;--ink-600:#5B5866;--ink-300:#C7C5CE;
+  --cloud:#EFEFEF;--paper:#FFFFFF;--line:#D8D7DD;--line-strong:#BFBDC7;
+  --danger-500:#C41D5B;
+  --font-display:"Montserrat","Poppins",system-ui,sans-serif;
+  --font-body:"Poppins","Montserrat",system-ui,sans-serif;
+  --shadow-sm:0 2px 6px rgba(4,2,15,.08);--shadow-md:0 6px 18px rgba(4,2,15,.10);--shadow-lg:0 16px 38px rgba(4,2,15,.12);
+  --focus:0 0 0 3px rgba(133,45,217,.45);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cloud);color:var(--ink-950);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--violet-700)}
+a:hover{color:var(--violet-800)}
+:focus-visible{outline:none;box-shadow:var(--focus);border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--violet-700)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--magenta-500);flex:none}
+h1,h2,h3,.q-titulo{font-family:var(--font-display);text-wrap:balance}
+p{text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:600 16px/1 var(--font-body);padding:14px 22px;border-radius:6px;text-decoration:none;transition:transform .12s var(--ease),background .2s var(--ease)}
+.btn-primario{background:var(--violet-700);color:#fff}
+.btn-primario:hover{background:var(--violet-800);color:#fff}
+.btn-primario:active{transform:translateY(1px)}
+.btn-secundario{background:transparent;color:var(--ink-700);border:1px solid var(--line-strong)}
+.btn-secundario:hover{background:var(--paper);color:var(--ink-950)}
+.btn svg{width:18px;height:18px}
+
+/* Topo */
+.topo{padding:20px 0}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.assinatura{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.assinatura img.av{width:44px;height:44px;border-radius:999px;object-fit:cover}
+.assinatura .nome{display:flex;align-items:center;gap:6px;font-weight:600;font-size:16px;line-height:1.2}
+.assinatura .nome img{width:16px;height:16px}
+.assinatura .arroba{font-size:14px;color:var(--ink-600);line-height:1.2}
+.topo .btn{padding:11px 18px;font-size:15px}
+
+/* Abertura */
+.abertura{padding:48px 0 72px}
+.abertura .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.caixas{margin:20px 0 0;display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-weight:700;font-size:clamp(27px,4vw,50px);line-height:1.04;letter-spacing:-.02em}
+.caixas span{display:inline-block;padding:4px 14px;border-radius:4px;white-space:nowrap}
+.caixas span:nth-child(1){background:var(--paper);color:var(--ink-950)}
+.caixas span:nth-child(2){background:var(--violet-700);color:#fff;margin-left:clamp(16px,3vw,44px)}
+.caixas span:nth-child(3){background:var(--ink-800);color:#fff;margin-left:clamp(8px,1.4vw,18px)}
+.abertura p.lead{margin:28px 0 0;font-size:18px;line-height:1.65;color:var(--ink-700);max-width:540px}
+.acoes{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:32px}
+.acoes .nota{font-size:14px;color:var(--ink-600)}
+.vitrine{position:relative}
+.janela{background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow-lg);overflow:hidden}
+.janela .barra{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.janela .barra i{width:9px;height:9px;border-radius:999px;background:var(--line)}
+.janela img{width:100%;aspect-ratio:1280/900;object-fit:cover;object-position:top}
+.vitrine .mini{position:absolute;width:46%;left:-28px;bottom:-32px}
+
+/* Seções */
+section{scroll-margin-top:24px}
+.secao{padding:72px 0}
+.secao h2{margin:14px 0 0;font-weight:700;font-size:clamp(28px,3.4vw,38px);line-height:1.12;letter-spacing:-.015em}
+.secao .sub{margin:12px 0 0;color:var(--ink-700);font-size:17px;max-width:620px}
+.trabalhos{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grade-trabalhos{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}
+.trabalho{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.trabalho:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);color:inherit}
+.trabalho img{width:100%;height:auto;aspect-ratio:1280/860;object-fit:cover;object-position:top;border-bottom:1px solid var(--line);background:var(--cloud)}
+.trabalho .info{padding:16px 20px 20px}
+.trabalho h3{margin:0;font-size:18px;font-weight:600;line-height:1.3}
+.trabalho p{margin:6px 0 0;font-size:15px;color:var(--ink-700)}
+.link-mais{display:inline-block;margin-top:28px;font-weight:600;font-size:15px}
+.link-mais svg{width:16px;height:16px;display:inline;vertical-align:-2px;margin-left:6px}
+.grade-formatos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.formato{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px}
+.formato .num{font:600 13px/1 var(--font-body);letter-spacing:.14em;color:var(--violet-700)}
+.formato h3{margin:12px 0 0;font-size:18px;font-weight:600;line-height:1.3}
+.formato p{margin:8px 0 0;font-size:15px;color:var(--ink-700)}
+.formato.nota-card{background:var(--violet-50);border-color:var(--violet-100)}
+.formato.nota-card p{color:var(--ink-950);margin:0;font-size:15px}
+
+/* Formulário */
+.form-sec{padding:72px 0 96px}
+.form-sec .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.form-sec .lado{position:sticky;top:32px}
+.cartao{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:36px}
+.progresso{height:6px;background:var(--cloud);border-radius:999px;overflow:hidden}
+.progresso i{display:block;height:100%;width:0;background:var(--violet-700);border-radius:999px;transition:width .35s var(--ease)}
+.contador{margin-top:12px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-600)}
+.q{border:0;margin:0;padding:0;min-width:0}
+.q-titulo{display:block;margin:20px 0 0;font-size:22px;font-weight:600;line-height:1.3;color:var(--ink-950)}
+.q-titulo .opc{font-family:var(--font-body);font-size:13px;font-weight:500;color:var(--ink-600);margin-left:8px;letter-spacing:0}
+.q-ajuda{margin:6px 0 0;color:var(--ink-700);font-size:15px}
+.campo{width:100%;margin-top:18px;font:400 17px/1.5 var(--font-body);color:var(--ink-950);background:var(--paper);border:1px solid var(--line-strong);border-radius:6px;padding:13px 14px}
+.campo:focus{outline:none;border-color:var(--violet-600);box-shadow:var(--focus)}
+textarea.campo{min-height:132px;resize:vertical}
+.opcoes{display:grid;gap:10px;margin-top:18px}
+.opcao{position:relative;display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line-strong);border-radius:6px;cursor:pointer;font-size:16px;line-height:1.4;transition:border-color .15s,background .15s}
+.opcao:hover{border-color:var(--violet-600)}
+.opcao input{position:absolute;opacity:0;pointer-events:none}
+.opcao .tecla{flex:none;width:26px;height:26px;display:grid;place-items:center;border-radius:4px;border:1px solid var(--line-strong);font-size:12px;font-weight:600;color:var(--ink-700);background:var(--paper)}
+.opcao .marca{flex:none;width:20px;height:20px;border-radius:4px;border:1.5px solid var(--line-strong);display:grid;place-items:center;background:var(--paper)}
+.opcao .marca svg{width:14px;height:14px;opacity:0;color:#fff}
+.opcao:has(input:checked){border-color:var(--violet-700);background:var(--violet-50)}
+.opcao:has(input:checked) .tecla{background:var(--violet-700);border-color:var(--violet-700);color:#fff}
+.opcao:has(input:checked) .marca{background:var(--violet-700);border-color:var(--violet-700)}
+.opcao:has(input:checked) .marca svg{opacity:1}
+.opcao:has(input:focus-visible){box-shadow:var(--focus)}
+.form-sec .wrap>*,.abertura .wrap>*{min-width:0}
+.opcao span:last-child{overflow-wrap:anywhere}
+.arquivo{margin-top:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px;border:1px dashed var(--line-strong);border-radius:6px;color:var(--ink-700);font-size:15px}
+.arquivo input{position:absolute;width:1px;height:1px;opacity:0}
+.arquivo .btn{padding:10px 16px;font-size:15px}
+.arquivo:has(input:focus-visible) .btn{box-shadow:var(--focus)}
+.arquivo [data-nome-arquivo]{overflow-wrap:anywhere;min-width:0}
+.erro{margin:10px 0 0;color:var(--danger-500);font-size:14px;font-weight:500;display:none}
+.q.invalida .erro{display:block}
+.q.invalida .campo,.q.invalida .opcao{border-color:var(--danger-500)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:32px}
+.nav .dica{font-size:13px;color:var(--ink-600)}
+.etapa{display:none}
+.etapa.ativa{display:block;animation:entra .35s var(--ease)}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.grupo+.grupo{margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.grupo-titulo{margin:0;font:600 13px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--violet-700)}
+.grupo .q{margin-top:8px}
+.grupo .q+.q{margin-top:28px}
+.grupo .q-titulo{font-size:18px}
+.fim{display:none;text-align:left}
+.fim.ativa{display:block;animation:entra .35s var(--ease)}
+.fim .ok{width:48px;height:48px;border-radius:999px;background:var(--violet-50);color:var(--violet-700);display:grid;place-items:center}
+.fim .ok svg{width:26px;height:26px}
+.fim h3{margin:20px 0 0;font-size:26px;font-weight:700}
+.fim p{margin:10px 0 0;color:var(--ink-700);font-size:17px}
+
+/* Rodapé */
+footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:14px;color:var(--ink-600)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer nav{display:flex;gap:20px}
+
+@media (max-width:900px){
+  .abertura .wrap,.form-sec .wrap{grid-template-columns:1fr;gap:40px}
+  .form-sec .lado{position:static}
+  .grade-formatos{grid-template-columns:1fr 1fr}
+  .vitrine .mini{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .topo .btn{display:none}
+  .vitrine{display:none}
+  .abertura{padding:24px 0 56px}
+  .abertura p.lead{font-size:17px}
+  .secao,.form-sec{padding:56px 0}
+  .grade-trabalhos,.grade-formatos{grid-template-columns:1fr}
+  .cartao{padding:24px 20px}
+  .q-titulo{font-size:20px}
+  .nav .dica{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="wrap">
+    <a class="assinatura" href="https://www.instagram.com/designby_nayara/" target="_blank" rel="noopener">
+      <img class="av" src="imagens/avatar.webp" alt="Foto de Nayara Hellen">
+      <span><span class="nome">Nayara Hellen <img src="imagens/verified-badge.png" alt="Perfil verificado"></span><span class="arroba">@designby_nayara</span></span>
+    </a>
+    <a class="btn btn-primario" href="#contato">Falar sobre um projeto</a>
+  </div>
+</header>
+
+<main>
+<section class="abertura">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Design by Nayara · Consultoria</span>
+      <h1 class="caixas"><span>Consultoria de</span><span>Power BI e Fabric</span><span>para times de dados</span></h1>
+      <p class="lead">Sou Nayara Hellen, consultora especializada em Power BI e Microsoft Fabric. Apoio times de dados na criação e na melhoria de relatórios, na definição de padrões visuais e no uso mais eficiente da capacidade do Fabric.</p>
+      <div class="acoes">
+        <a class="btn btn-primario" href="#contato">Começar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="nota">12 perguntas · cerca de 3 minutos</span>
+      </div>
+    </div>
+    <div class="vitrine" aria-hidden="true">
+      <div class="janela"><div class="barra"><i></i><i></i><i></i></div><img src="imagens/grao-raro.webp" alt=""></div>
+      <div class="janela mini"><img src="imagens/pronto-socorro.webp" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao trabalhos" id="trabalhos">
+  <div class="wrap">
+    <span class="eyebrow">Portfólio</span>
+    <h2>Relatórios selecionados</h2>
+    <p class="sub">Todos os relatórios abaixo usam dados fictícios.</p>
+    <div class="grade-trabalhos">
+      <a class="trabalho" href="https://community.fabric.microsoft.com/discussions/datastoriesgallery/gr%C3%A3o-raro-assinaturas-de-caf%C3%A9-especial/5374430" target="_blank" rel="noopener"><img src="imagens/grao-raro.webp" alt="Visão geral de um relatório de assinaturas de café, com cartões de receita e assinantes e gráficos por mês" width="1280" height="860"><div class="info"><h3>Assinaturas de café especial</h3><p>Receita recorrente, assinantes e cancelamentos mês a mês.</p></div></a>
+      <a class="trabalho" href="https://community.fabric.microsoft.com/discussions/datastoriesgallery/emergency-department-operations-patient-flow-triage-and-a-shift-staffing-simulat/5372775" target="_blank" rel="noopener"><img src="imagens/pronto-socorro.webp" alt="Visão geral de um relatório de pronto-socorro, com atendimentos por mês, por unidade e por classificação de risco" width="1280" height="860"><div class="info"><h3>Operação de pronto-socorro</h3><p>Fluxo de pacientes, triagem e simulador de plantão.</p></div></a>
+      <a class="trabalho" href="https://community.fabric.microsoft.com/discussions/datastoriesgallery/gest%C3%A3o-de-pessoas/5369221" target="_blank" rel="noopener"><img src="imagens/gestao-de-pessoas.webp" alt="Visão geral de um relatório de RH, com admissões, desligamentos e turnover por diretoria" width="1280" height="860"><div class="info"><h3>Gestão de pessoas</h3><p>Quadro ativo, movimentação e folha de pagamento.</p></div></a>
+      <a class="trabalho" href="https://community.fabric.microsoft.com/discussions/datastoriesgallery/veredas-energia-central-de-opera%C3%A7%C3%B5es-solares/5419718" target="_blank" rel="noopener"><img src="imagens/veredas-energia.webp" alt="Visão geral de um relatório de usinas solares, com energia gerada por mês e perdas por usina" width="1280" height="860"><div class="info"><h3>Central de operações solares</h3><p>Geração, disponibilidade e perdas de energia por usina.</p></div></a>
+    </div>
+    <a class="link-mais" href="https://community.fabric.microsoft.com/users/nayarahellen/1264092" target="_blank" rel="noopener">Ver mais relatórios na Comunidade do Microsoft Fabric<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+  </div>
+</section>
+
+<section class="secao" id="formatos">
+  <div class="wrap">
+    <span class="eyebrow">Formatos</span>
+    <h2>Como posso ajudar</h2>
+    <div class="grade-formatos">
+      <div class="formato"><span class="num">01</span><h3>Assessment de capacidade do Fabric</h3><p>Análise do consumo da capacidade e um plano do que otimizar primeiro nos relatórios, nos modelos e nas atualizações.</p></div>
+      <div class="formato"><span class="num">02</span><h3>Redesign ou relatório novo</h3><p>Do desenho à entrega, com validações do time em cada etapa.</p></div>
+      <div class="formato"><span class="num">03</span><h3>Padrão visual do time</h3><p>Tema, componentes e guia para todos os relatórios seguirem a mesma identidade.</p></div>
+      <div class="formato"><span class="num">04</span><h3>Suporte mensal</h3><p>Um pacote de horas por mês para ajustes, revisões e dúvidas técnicas.</p></div>
+      <div class="formato"><span class="num">05</span><h3>Alocação</h3><p>Uma pessoa sênior a mais no seu time por alguns meses.</p></div>
+      <div class="formato nota-card"><p>Todo trabalho é feito sob medida, com os dados e as perguntas da sua empresa. Não vendo modelo pronto de relatório e não dou cursos nem treinamentos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="form-sec" id="contato">
+  <div class="wrap">
+    <div class="lado">
+      <span class="eyebrow">Contato</span>
+      <h2 style="margin:14px 0 0;font-weight:700;font-size:clamp(28px,3.4vw,38px);line-height:1.12;letter-spacing:-.015em">Conte sobre o seu projeto</h2>
+      <p class="sub" style="margin:12px 0 0;color:var(--ink-700);font-size:17px">São 12 perguntas, que levam cerca de 3 minutos. As respostas me ajudam a entender o seu cenário antes da nossa conversa, para que ela seja mais objetiva.</p>
+    </div>
+    
+    <div class="cartao" data-modo="A">
+      <div class="cabeca-form">
+        <div class="progresso" aria-hidden="true"><i></i></div>
+        <p class="contador" aria-live="polite"><span data-atual>1</span> de 12</p>
+      </div>
+      <form novalidate data-form>
+      <div class="etapa ativa" data-etapa="0">
+        <div class="q" data-q="nome" data-obrigatoria="1" data-tipo="texto_curto"><label class="q-titulo" for="q-nome-in">Qual o seu nome?</label><input class="campo" id="q-nome-in" name="nome" type="text" autocomplete="name" required><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
+        <div class="nav">
+          <span></span>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="1">
+        <div class="q" data-q="empresa" data-obrigatoria="1" data-tipo="texto_curto"><label class="q-titulo" for="q-empresa-in">Em qual empresa você trabalha?</label><input class="campo" id="q-empresa-in" name="empresa" type="text" autocomplete="organization" required><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="2">
+        <fieldset class="q" data-q="papel" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Qual o seu papel na empresa?</legend><div class="opcoes"><label class="opcao"><input type="radio" name="papel" value="Gerente ou coordenador de dados" required><span class="tecla" aria-hidden="true">A</span><span>Gerente ou coordenador de dados</span></label><label class="opcao"><input type="radio" name="papel" value="Analista"><span class="tecla" aria-hidden="true">B</span><span>Analista</span></label><label class="opcao"><input type="radio" name="papel" value="Dono ou diretor"><span class="tecla" aria-hidden="true">C</span><span>Dono ou diretor</span></label><label class="opcao"><input type="radio" name="papel" value="Outro"><span class="tecla" aria-hidden="true">D</span><span>Outro</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="3">
+        <fieldset class="q" data-q="time" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Quantas pessoas trabalham com dados no seu time?</legend><div class="opcoes"><label class="opcao"><input type="radio" name="time" value="Ainda não temos" required><span class="tecla" aria-hidden="true">A</span><span>Ainda não temos</span></label><label class="opcao"><input type="radio" name="time" value="1 a 2"><span class="tecla" aria-hidden="true">B</span><span>1 a 2</span></label><label class="opcao"><input type="radio" name="time" value="3 a 10"><span class="tecla" aria-hidden="true">C</span><span>3 a 10</span></label><label class="opcao"><input type="radio" name="time" value="Mais de 10"><span class="tecla" aria-hidden="true">D</span><span>Mais de 10</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="4">
+        <fieldset class="q" data-q="fabric" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Como vocês usam o Power BI hoje?</legend><div class="opcoes"><label class="opcao"><input type="radio" name="fabric" value="Com capacidade do Fabric" required><span class="tecla" aria-hidden="true">A</span><span>Com capacidade do Fabric</span></label><label class="opcao"><input type="radio" name="fabric" value="Só com licença Pro ou PPU"><span class="tecla" aria-hidden="true">B</span><span>Só com licença Pro ou PPU</span></label><label class="opcao"><input type="radio" name="fabric" value="Não sei dizer"><span class="tecla" aria-hidden="true">C</span><span>Não sei dizer</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="5">
+        <fieldset class="q" data-q="formato" data-obrigatoria="1" data-tipo="multipla_escolha"><legend class="q-titulo">Que tipo de ajuda você procura?</legend><p class="q-ajuda" id="q-formato-ajuda">Pode marcar mais de uma.</p><div class="opcoes"><label class="opcao"><input type="checkbox" name="formato" value="Assessment de capacidade do Fabric"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Assessment de capacidade do Fabric</span></label><label class="opcao"><input type="checkbox" name="formato" value="Redesign ou relatório novo"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Redesign ou relatório novo</span></label><label class="opcao"><input type="checkbox" name="formato" value="Padrão visual do time"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Padrão visual do time</span></label><label class="opcao"><input type="checkbox" name="formato" value="Suporte mensal"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Suporte mensal</span></label><label class="opcao"><input type="checkbox" name="formato" value="Alocação"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Alocação</span></label><label class="opcao"><input type="checkbox" name="formato" value="Ainda não sei"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Ainda não sei</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="6">
+        <div class="q" data-q="problema" data-obrigatoria="1" data-tipo="texto_longo"><label class="q-titulo" for="q-problema-in">Me conta um pouco do problema.</label><p class="q-ajuda" id="q-problema-ajuda">O que acontece hoje e o que você gostaria que mudasse?</p><textarea class="campo" id="q-problema-in" name="problema" required aria-describedby="q-problema-ajuda"></textarea><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica"></span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="7">
+        <fieldset class="q" data-q="prazo" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Para quando você precisa?</legend><div class="opcoes"><label class="opcao"><input type="radio" name="prazo" value="Este mês" required><span class="tecla" aria-hidden="true">A</span><span>Este mês</span></label><label class="opcao"><input type="radio" name="prazo" value="Nos próximos 3 meses"><span class="tecla" aria-hidden="true">B</span><span>Nos próximos 3 meses</span></label><label class="opcao"><input type="radio" name="prazo" value="Ainda estou pesquisando"><span class="tecla" aria-hidden="true">C</span><span>Ainda estou pesquisando</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="8">
+        <fieldset class="q" data-q="investimento" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Qual o investimento previsto para este projeto?</legend><p class="q-ajuda" id="q-investimento-ajuda">Serve para eu sugerir o formato que cabe no seu momento.</p><div class="opcoes"><label class="opcao"><input type="radio" name="investimento" value="Até R$ 3 mil" required><span class="tecla" aria-hidden="true">A</span><span>Até R$ 3 mil</span></label><label class="opcao"><input type="radio" name="investimento" value="De R$ 3 mil a R$ 10 mil"><span class="tecla" aria-hidden="true">B</span><span>De R$ 3 mil a R$ 10 mil</span></label><label class="opcao"><input type="radio" name="investimento" value="De R$ 10 mil a R$ 30 mil"><span class="tecla" aria-hidden="true">C</span><span>De R$ 10 mil a R$ 30 mil</span></label><label class="opcao"><input type="radio" name="investimento" value="Acima de R$ 30 mil"><span class="tecla" aria-hidden="true">D</span><span>Acima de R$ 30 mil</span></label><label class="opcao"><input type="radio" name="investimento" value="Ainda não temos orçamento definido"><span class="tecla" aria-hidden="true">E</span><span>Ainda não temos orçamento definido</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="9">
+        <div class="q" data-q="print" data-obrigatoria="0" data-tipo="arquivo"><label class="q-titulo" for="q-print-in">Quer mandar um print de algum relatório atual?<span class="opc">Opcional</span></label><p class="q-ajuda" id="q-print-ajuda">Totalmente opcional. Se preferir, borre os números e os nomes antes de enviar.</p><label class="arquivo"><input id="q-print-in" name="print" type="file" accept="image/*,.pdf" aria-describedby="q-print-ajuda"><span class="btn btn-secundario">Escolher arquivo</span><span data-nome-arquivo>Imagem ou PDF, até 10 MB</span></label><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="10">
+        <div class="q" data-q="contato" data-obrigatoria="1" data-tipo="texto_curto"><label class="q-titulo" for="q-contato-in">Qual o melhor e-mail ou WhatsApp para eu falar com você?</label><input class="campo" id="q-contato-in" name="contato" type="text" autocomplete="on" required><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="etapa" data-etapa="11">
+        <fieldset class="q" data-q="origem" data-obrigatoria="0" data-tipo="escolha_unica"><legend class="q-titulo">Como você conheceu o meu trabalho?<span class="opc">Opcional</span></legend><div class="opcoes"><label class="opcao"><input type="radio" name="origem" value="Instagram"><span class="tecla" aria-hidden="true">A</span><span>Instagram</span></label><label class="opcao"><input type="radio" name="origem" value="LinkedIn"><span class="tecla" aria-hidden="true">B</span><span>LinkedIn</span></label><label class="opcao"><input type="radio" name="origem" value="Indicação"><span class="tecla" aria-hidden="true">C</span><span>Indicação</span></label><label class="opcao"><input type="radio" name="origem" value="Comunidade do Microsoft Fabric"><span class="tecla" aria-hidden="true">D</span><span>Comunidade do Microsoft Fabric</span></label><label class="opcao"><input type="radio" name="origem" value="Outro"><span class="tecla" aria-hidden="true">E</span><span>Outro</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
+        <div class="nav">
+          <button type="button" class="btn btn-secundario" data-voltar><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Voltar</button>
+          <span class="dica">ou aperte Enter</span>
+          <button type="submit" class="btn btn-primario">Enviar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      </form>
+      <div class="fim" data-fim tabindex="-1"><div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h3>Recebi as suas respostas!</h3><p>Em até dois dias úteis eu volto pelo contato que você deixou, com sugestões de horário para a nossa conversa de 30 minutos, sem custo.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Nayara Hellen · Consultoria de Power BI e Microsoft Fabric</span>
+    <nav aria-label="Redes"><a href="https://www.instagram.com/designby_nayara/" target="_blank" rel="noopener">Instagram</a><a href="https://community.fabric.microsoft.com/users/nayarahellen/1264092" target="_blank" rel="noopener">Comunidade do Microsoft Fabric</a></nav>
+  </div>
+</footer>
+<script>
+(() => {
+  const cartao = document.querySelector('.cartao');
+  const form = cartao.querySelector('[data-form]');
+  const fim = cartao.querySelector('[data-fim]');
+  const modo = cartao.dataset.modo;
+
+  function respondida(q) {
+    if (q.dataset.obrigatoria !== '1') return true;
+    const t = q.dataset.tipo;
+    if (t === 'escolha_unica' || t === 'multipla_escolha') return !!q.querySelector('input:checked');
+    const c = q.querySelector('.campo');
+    return c && c.value.trim().length > 0;
+  }
+  function valida(q) {
+    const ok = respondida(q);
+    q.classList.toggle('invalida', !ok);
+    return ok;
+  }
+  form.addEventListener('input', e => { const q = e.target.closest('.q'); if (q && q.classList.contains('invalida')) valida(q); });
+  form.addEventListener('change', e => { const q = e.target.closest('.q'); if (q && q.classList.contains('invalida')) valida(q); });
+  form.addEventListener('change', e => { if (e.target.type === 'file') { const n = e.target.closest('.arquivo').querySelector('[data-nome-arquivo]'); if (e.target.files[0]) n.textContent = e.target.files[0].name; } });
+
+  function concluir() {
+    // Aqui entra o envio de verdade na integração. Na prévia, só mostra o fechamento.
+    form.style.display = 'none';
+    const cab = cartao.querySelector('.cabeca-form'); if (cab) cab.style.display = 'none';
+    fim.classList.add('ativa');
+    fim.focus();
+  }
+
+  if (modo === 'A') {
+    const etapas = [...form.querySelectorAll('.etapa')];
+    const barra = cartao.querySelector('.progresso i');
+    const atual = cartao.querySelector('[data-atual]');
+    let i = 0;
+    const mostra = n => {
+      etapas[i].classList.remove('ativa');
+      i = n;
+      etapas[i].classList.add('ativa');
+      atual.textContent = i + 1;
+      barra.style.width = ((i) / etapas.length * 100) + '%';
+      const foco = etapas[i].querySelector('.campo, input');
+      if (foco && window.matchMedia('(hover:hover)').matches) foco.focus({ preventScroll: true });
+    };
+    const avanca = () => { const q = etapas[i].querySelector('.q'); if (!valida(q)) return; if (i < etapas.length - 1) mostra(i + 1); };
+    form.addEventListener('click', e => {
+      if (e.target.closest('[data-avancar]')) avanca();
+      if (e.target.closest('[data-voltar]') && i > 0) mostra(i - 1);
+    });
+    form.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA' && e.target.type !== 'submit') {
+        e.preventDefault();
+        if (i < etapas.length - 1) avanca(); else form.requestSubmit();
+      }
+    });
+    // Escolha única avança sozinha, depois de um instante para a pessoa ver a marcação
+    form.addEventListener('change', e => {
+      if (e.target.type === 'radio' && i < etapas.length - 1) setTimeout(avanca, 280);
+    });
+    form.addEventListener('submit', e => { e.preventDefault(); const q = etapas[i].querySelector('.q'); if (valida(q)) { barra.style.width = '100%'; concluir(); } });
+    barra.style.width = '0%';
+  } else {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const qs = [...form.querySelectorAll('.q')];
+      const ruins = qs.filter(q => !valida(q));
+      if (ruins.length) { ruins[0].scrollIntoView({ behavior: 'smooth', block: 'center' }); const c = ruins[0].querySelector('.campo, input'); if (c) c.focus({ preventScroll: true }); return; }
+      concluir();
+    });
+  }
+})();
+</script>
+</body>
+</html>
