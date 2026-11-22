@@ -82,31 +82,31 @@
     "itens": [
       {
         "nome": "Design e UX de relatórios",
-        "texto": "Pesquisa com quem usa, organização das páginas e desenho visual, do protótipo à entrega."
+        "texto": "Pesquisa com quem usa, protótipo e desenho visual, para relatórios fáceis de ler e que o time de fato usa."
       },
       {
         "nome": "Modelagem e DAX",
-        "texto": "Modelo em estrela, medidas confiáveis e números que conferem com a fonte."
+        "texto": "Organização dos dados e medidas em DAX, para números que batem com a fonte, relatórios mais rápidos e manutenção simples."
       },
       {
         "nome": "Assessment de capacidade do Fabric",
-        "texto": "Análise do consumo da capacidade e um plano do que otimizar primeiro nos relatórios, nos modelos e nas atualizações."
+        "texto": "Análise do consumo da capacidade, com um plano do que otimizar primeiro nos relatórios, nos modelos e nas atualizações para evitar gargalos."
       },
       {
         "nome": "Padrão visual do time",
-        "texto": "Tema, componentes e guia para todos os relatórios seguirem a mesma identidade."
+        "texto": "Tema, componentes reutilizáveis e guia de uso, para todos os relatórios terem a mesma identidade e as próximas entregas saírem mais rápido."
       },
       {
         "nome": "Automação com Power Automate",
-        "texto": "Fluxos que tiram do time as tarefas repetitivas, como alertas, aprovações e envio de relatórios."
+        "texto": "Fluxos para alertas, aprovações e envio de relatórios, que tiram do time as tarefas manuais e repetitivas."
       }
     ],
-    "nota": "Todo trabalho é feito sob medida, com os dados e as perguntas da sua empresa. Não vendo modelo pronto de relatório e não dou cursos nem treinamentos."
+    "nota": "Todo projeto parte dos dados e das perguntas da sua empresa. Por isso, não trabalho com relatórios prontos, cursos ou treinamentos."
   },
   "formulario": {
     "etiqueta": "Contato",
     "titulo": "Conte sobre o seu projeto",
-    "texto": "São 11 perguntas, que levam cerca de 3 minutos. As respostas me ajudam a entender o seu cenário antes da nossa conversa, para que ela seja mais objetiva.",
+    "texto": "As respostas me ajudam a entender o seu cenário antes da nossa conversa. Depois do envio, retorno em até dois dias úteis para marcarmos 30 minutos de conversa, sem custo.",
     "botao_avancar": "Continuar",
     "botao_voltar": "Voltar",
     "botao_enviar": "Enviar",
