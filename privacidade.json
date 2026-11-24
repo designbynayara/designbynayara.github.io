@@ -1,0 +1,28 @@
+{
+  "titulo": "Política de privacidade",
+  "atualizada": "24 de novembro de 2026",
+  "abertura": "Esta página explica como a Design by Nayara, consultoria de Power BI de Nayara Hellen, trata os dados que você envia pelos formulários de contato desta página e dos anúncios no Instagram e no Facebook.",
+  "secoes": [
+    {
+      "titulo": "Quais dados são coletados",
+      "texto": "Nome, e-mail, telefone, empresa e cargo, se você informar, e as respostas sobre o seu projeto: tamanho do time de dados, uso do Microsoft Fabric, tipo de ajuda, prazo e faixa de investimento."
+    },
+    {
+      "titulo": "Para que os dados são usados",
+      "texto": "Só para responder ao seu contato, entender o seu projeto e, se fizer sentido, marcar uma conversa e enviar uma proposta. Os dados não entram em lista de e-mail e não são usados para outro fim."
+    },
+    {
+      "titulo": "Com quem os dados são compartilhados",
+      "texto": "Com ninguém. Os dados não são vendidos nem repassados. Eles ficam guardados nas ferramentas que recebem o formulário (Meta, no caso dos anúncios, e Google Forms, no caso desta página), com acesso só da Nayara."
+    },
+    {
+      "titulo": "Por quanto tempo os dados ficam guardados",
+      "texto": "Enquanto durar a conversa sobre o projeto e, se houver contrato, enquanto ele durar. Sem projeto em andamento, os dados são apagados em até 12 meses."
+    },
+    {
+      "titulo": "Seus direitos",
+      "texto": "Pela Lei Geral de Proteção de Dados (LGPD), você pode pedir a qualquer momento para ver, corrigir ou apagar os seus dados. Basta mandar uma mensagem no direct do Instagram @designby_nayara, e o pedido é atendido em até 15 dias."
+    }
+  ],
+  "voltar": { "texto": "Voltar para a página de consultoria", "url": "./" }
+}
