@@ -7,7 +7,7 @@
     "avatar": "imagens/avatar.webp",
     "selo": "imagens/verified-badge.png",
     "instagram": "https://www.instagram.com/designby_nayara/",
-    "comunidade": "https://community.fabric.microsoft.com/users/nayarahellen/1264092"
+    "comunidade": "https://community.fabric.microsoft.com/search?q=nayarahellen"
   },
   "topo": {
     "etiqueta": "Design by Nayara",
@@ -110,6 +110,11 @@
     "botao_avancar": "Continuar",
     "botao_voltar": "Voltar",
     "botao_enviar": "Enviar",
+    "privacidade": {
+      "antes": "Ao enviar, você concorda com a",
+      "link": "política de privacidade",
+      "url": "privacidade.html"
+    },
     "opcional": "Opcional",
     "obrigatoria_msg": "Responda esta pergunta para continuar.",
     "envio": {
@@ -293,7 +298,11 @@
       },
       {
         "texto": "Comunidade do Microsoft Fabric",
-        "url": "https://community.fabric.microsoft.com/users/nayarahellen/1264092"
+        "url": "https://community.fabric.microsoft.com/search?q=nayarahellen"
+      },
+      {
+        "texto": "Política de privacidade",
+        "url": "privacidade.html"
       }
     ]
   }

@@ -144,6 +144,8 @@ textarea.campo{min-height:132px;resize:vertical}
 .q.invalida .campo,.q.invalida .opcao{border-color:var(--danger-500)}
 .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:32px}
 .nav .dica{font-size:13px;color:var(--ink-600)}
+.nota-privacidade{margin:16px 0 0;font-size:13px;color:var(--ink-600);text-align:right}
+.nota-privacidade a{color:inherit;text-decoration:underline}
 .etapa{display:none}
 .etapa.ativa{display:block;animation:entra .35s var(--ease)}
 @keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -162,7 +164,7 @@ textarea.campo{min-height:132px;resize:vertical}
 /* Rodapé */
 footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:14px;color:var(--ink-600)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer nav{display:flex;gap:20px}
+footer nav{display:flex;gap:12px 20px;flex-wrap:wrap}
 
 @media (max-width:900px){
   .abertura .wrap,.form-sec .wrap{grid-template-columns:1fr;gap:40px}
@@ -222,6 +224,11 @@ function pergunta(q, modo) {
   return `<${tag} class="q" data-q="${q.id}" data-obrigatoria="${q.obrigatoria ? 1 : 0}" data-tipo="${q.tipo}">${titulo}${ajuda}${corpo}<p class="erro" role="alert">${esc(F.obrigatoria_msg)}</p></${tag}>`;
 }
 
+function notaPrivacidade() {
+  const F = C.formulario;
+  return `${F.privacidade ? `<p class="nota-privacidade">${esc(F.privacidade.antes)} <a href="${esc(F.privacidade.url)}" target="_blank" rel="noopener">${esc(F.privacidade.link)}</a>.</p>` : ''}`;
+}
+
 function formularioA() {
   const F = C.formulario;
   const total = F.perguntas.length;
@@ -235,6 +242,7 @@ function formularioA() {
             ? `<button type="submit" class="btn btn-primario">${esc(F.botao_enviar)}${ICO.seta}</button>`
             : `<button type="button" class="btn btn-primario" data-avancar>${esc(F.botao_avancar)}${ICO.seta}</button>`}
         </div>
+        ${i === total - 1 ? notaPrivacidade() : ''}
       </div>`).join('');
   return `
     <div class="cartao" data-modo="A">
@@ -261,6 +269,7 @@ function formularioB() {
     <div class="cartao" data-modo="B">
       <form novalidate data-form>${grupos}
         <div class="nav"><span></span><button type="submit" class="btn btn-primario">${esc(F.botao_enviar)}${ICO.seta}</button></div>
+        ${notaPrivacidade()}
         <p class="erro-envio" data-erro-envio role="alert" hidden>${esc(F.envio.erro)}</p>
       </form>
       ${fim()}

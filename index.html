@@ -140,6 +140,8 @@ textarea.campo{min-height:132px;resize:vertical}
 .q.invalida .campo,.q.invalida .opcao{border-color:var(--danger-500)}
 .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:32px}
 .nav .dica{font-size:13px;color:var(--ink-600)}
+.nota-privacidade{margin:16px 0 0;font-size:13px;color:var(--ink-600);text-align:right}
+.nota-privacidade a{color:inherit;text-decoration:underline}
 .etapa{display:none}
 .etapa.ativa{display:block;animation:entra .35s var(--ease)}
 @keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -158,7 +160,7 @@ textarea.campo{min-height:132px;resize:vertical}
 /* Rodapé */
 footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:14px;color:var(--ink-600)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer nav{display:flex;gap:20px}
+footer nav{display:flex;gap:12px 20px;flex-wrap:wrap}
 
 @media (max-width:900px){
   .abertura .wrap,.form-sec .wrap{grid-template-columns:1fr;gap:40px}
@@ -225,7 +227,7 @@ footer nav{display:flex;gap:20px}
       <a class="trabalho" href="https://community.fabric.microsoft.com/discussions/DataStoriesGallery/nuvem-alta-carteira-de-clientes-de-software-b2b/5419717" target="_blank" rel="noopener"><img src="imagens/nuvem-alta.webp" alt="Visão geral de um relatório de carteira de clientes B2B, com receita recorrente, contas ativas, índice de saúde e a lista de contas" width="1280" height="860"><div class="info"><h3>Carteira de clientes de software</h3><p>Receita recorrente, saúde das contas e renovações.</p></div></a>
       <a class="trabalho" href="https://community.fabric.microsoft.com/discussions/DataStoriesGallery/gest%C3%A3o-de-clientes-carteira-de-uma-opera%C3%A7%C3%A3o-de-log%C3%ADstica/5419716" target="_blank" rel="noopener"><img src="imagens/gestao-de-clientes.webp" alt="Visão geral de um relatório de clientes de uma transportadora, com receita por cliente, nível de serviço e clientes por porte" width="1280" height="860"><div class="info"><h3>Gestão de clientes de logística</h3><p>Receita por cliente, nível de serviço e retenção da carteira.</p></div></a>
     </div>
-    <a class="link-mais" href="https://community.fabric.microsoft.com/users/nayarahellen/1264092" target="_blank" rel="noopener">Ver mais relatórios na Comunidade do Microsoft Fabric<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <a class="link-mais" href="https://community.fabric.microsoft.com/search?q=nayarahellen" target="_blank" rel="noopener">Ver mais relatórios na Comunidade do Microsoft Fabric<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
   </div>
 </section>
 
@@ -265,6 +267,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="1">
         <div class="q" data-q="empresa" data-obrigatoria="1" data-tipo="texto_curto"><label class="q-titulo" for="q-empresa-in">Em qual empresa você trabalha?</label><input class="campo" id="q-empresa-in" name="empresa" type="text" autocomplete="organization" required><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
@@ -273,6 +276,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="2">
         <fieldset class="q" data-q="papel" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Qual o seu papel na empresa?</legend><div class="opcoes"><label class="opcao"><input type="radio" name="papel" value="Gerente ou coordenador de dados" required><span class="tecla" aria-hidden="true">A</span><span>Gerente ou coordenador de dados</span></label><label class="opcao"><input type="radio" name="papel" value="Analista"><span class="tecla" aria-hidden="true">B</span><span>Analista</span></label><label class="opcao"><input type="radio" name="papel" value="Dono ou diretor"><span class="tecla" aria-hidden="true">C</span><span>Dono ou diretor</span></label><label class="opcao"><input type="radio" name="papel" value="Outro"><span class="tecla" aria-hidden="true">D</span><span>Outro</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
@@ -281,6 +285,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="3">
         <fieldset class="q" data-q="time" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Quantas pessoas trabalham com dados no seu time?</legend><div class="opcoes"><label class="opcao"><input type="radio" name="time" value="Ainda não temos" required><span class="tecla" aria-hidden="true">A</span><span>Ainda não temos</span></label><label class="opcao"><input type="radio" name="time" value="1 a 2"><span class="tecla" aria-hidden="true">B</span><span>1 a 2</span></label><label class="opcao"><input type="radio" name="time" value="3 a 10"><span class="tecla" aria-hidden="true">C</span><span>3 a 10</span></label><label class="opcao"><input type="radio" name="time" value="Mais de 10"><span class="tecla" aria-hidden="true">D</span><span>Mais de 10</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
@@ -289,6 +294,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="4">
         <fieldset class="q" data-q="fabric" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Como vocês usam o Power BI hoje?</legend><div class="opcoes"><label class="opcao"><input type="radio" name="fabric" value="Com capacidade do Fabric" required><span class="tecla" aria-hidden="true">A</span><span>Com capacidade do Fabric</span></label><label class="opcao"><input type="radio" name="fabric" value="Só com licença Pro ou PPU"><span class="tecla" aria-hidden="true">B</span><span>Só com licença Pro ou PPU</span></label><label class="opcao"><input type="radio" name="fabric" value="Não sei dizer"><span class="tecla" aria-hidden="true">C</span><span>Não sei dizer</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
@@ -297,6 +303,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="5">
         <fieldset class="q" data-q="formato" data-obrigatoria="1" data-tipo="multipla_escolha"><legend class="q-titulo">Que tipo de ajuda você procura?</legend><p class="q-ajuda" id="q-formato-ajuda">Pode marcar mais de uma.</p><div class="opcoes"><label class="opcao"><input type="checkbox" name="formato" value="Design e UX de relatórios"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Design e UX de relatórios</span></label><label class="opcao"><input type="checkbox" name="formato" value="Modelagem e DAX"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Modelagem e DAX</span></label><label class="opcao"><input type="checkbox" name="formato" value="Assessment de capacidade do Fabric"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Assessment de capacidade do Fabric</span></label><label class="opcao"><input type="checkbox" name="formato" value="Padrão visual do time"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Padrão visual do time</span></label><label class="opcao"><input type="checkbox" name="formato" value="Automação com Power Automate"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Automação com Power Automate</span></label><label class="opcao"><input type="checkbox" name="formato" value="Ainda não sei"><span class="marca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Ainda não sei</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
@@ -305,6 +312,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="6">
         <div class="q" data-q="problema" data-obrigatoria="1" data-tipo="texto_longo"><label class="q-titulo" for="q-problema-in">Me conta um pouco do problema.</label><p class="q-ajuda" id="q-problema-ajuda">O que acontece hoje e o que você gostaria que mudasse?</p><textarea class="campo" id="q-problema-in" name="problema" required aria-describedby="q-problema-ajuda"></textarea><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
@@ -313,6 +321,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica"></span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="7">
         <fieldset class="q" data-q="prazo" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Para quando você precisa?</legend><div class="opcoes"><label class="opcao"><input type="radio" name="prazo" value="Este mês" required><span class="tecla" aria-hidden="true">A</span><span>Este mês</span></label><label class="opcao"><input type="radio" name="prazo" value="Nos próximos 3 meses"><span class="tecla" aria-hidden="true">B</span><span>Nos próximos 3 meses</span></label><label class="opcao"><input type="radio" name="prazo" value="Ainda estou pesquisando"><span class="tecla" aria-hidden="true">C</span><span>Ainda estou pesquisando</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
@@ -321,6 +330,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="8">
         <fieldset class="q" data-q="investimento" data-obrigatoria="1" data-tipo="escolha_unica"><legend class="q-titulo">Qual o investimento previsto para este projeto?</legend><p class="q-ajuda" id="q-investimento-ajuda">Serve para eu sugerir o formato que cabe no seu momento.</p><div class="opcoes"><label class="opcao"><input type="radio" name="investimento" value="Até R$ 3 mil" required><span class="tecla" aria-hidden="true">A</span><span>Até R$ 3 mil</span></label><label class="opcao"><input type="radio" name="investimento" value="De R$ 3 mil a R$ 10 mil"><span class="tecla" aria-hidden="true">B</span><span>De R$ 3 mil a R$ 10 mil</span></label><label class="opcao"><input type="radio" name="investimento" value="De R$ 10 mil a R$ 30 mil"><span class="tecla" aria-hidden="true">C</span><span>De R$ 10 mil a R$ 30 mil</span></label><label class="opcao"><input type="radio" name="investimento" value="Acima de R$ 30 mil"><span class="tecla" aria-hidden="true">D</span><span>Acima de R$ 30 mil</span></label><label class="opcao"><input type="radio" name="investimento" value="Ainda não temos orçamento definido"><span class="tecla" aria-hidden="true">E</span><span>Ainda não temos orçamento definido</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
@@ -329,6 +339,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="9">
         <div class="q" data-q="contato" data-obrigatoria="1" data-tipo="texto_curto"><label class="q-titulo" for="q-contato-in">Qual o melhor e-mail ou WhatsApp para eu falar com você?</label><input class="campo" id="q-contato-in" name="contato" type="text" autocomplete="on" required><p class="erro" role="alert">Responda esta pergunta para continuar.</p></div>
@@ -337,6 +348,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="button" class="btn btn-primario" data-avancar>Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        
       </div>
       <div class="etapa" data-etapa="10">
         <fieldset class="q" data-q="origem" data-obrigatoria="0" data-tipo="escolha_unica"><legend class="q-titulo">Como você conheceu o meu trabalho?<span class="opc">Opcional</span></legend><div class="opcoes"><label class="opcao"><input type="radio" name="origem" value="Instagram"><span class="tecla" aria-hidden="true">A</span><span>Instagram</span></label><label class="opcao"><input type="radio" name="origem" value="LinkedIn"><span class="tecla" aria-hidden="true">B</span><span>LinkedIn</span></label><label class="opcao"><input type="radio" name="origem" value="Indicação"><span class="tecla" aria-hidden="true">C</span><span>Indicação</span></label><label class="opcao"><input type="radio" name="origem" value="Comunidade do Microsoft Fabric"><span class="tecla" aria-hidden="true">D</span><span>Comunidade do Microsoft Fabric</span></label><label class="opcao"><input type="radio" name="origem" value="Outro"><span class="tecla" aria-hidden="true">E</span><span>Outro</span></label></div><p class="erro" role="alert">Responda esta pergunta para continuar.</p></fieldset>
@@ -345,6 +357,7 @@ footer nav{display:flex;gap:20px}
           <span class="dica">ou aperte Enter</span>
           <button type="submit" class="btn btn-primario">Enviar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
+        <p class="nota-privacidade">Ao enviar, você concorda com a <a href="privacidade.html" target="_blank" rel="noopener">política de privacidade</a>.</p>
       </div>
         <p class="erro-envio" data-erro-envio role="alert" hidden>Não foi possível enviar agora. Verifique a sua conexão e tente de novo.</p>
       </form>
@@ -357,7 +370,7 @@ footer nav{display:flex;gap:20px}
 <footer>
   <div class="wrap">
     <span>Nayara Hellen · Consultoria de Power BI e Microsoft Fabric</span>
-    <nav aria-label="Redes"><a href="https://www.instagram.com/designby_nayara/" target="_blank" rel="noopener">Instagram</a><a href="https://community.fabric.microsoft.com/users/nayarahellen/1264092" target="_blank" rel="noopener">Comunidade do Microsoft Fabric</a></nav>
+    <nav aria-label="Redes"><a href="https://www.instagram.com/designby_nayara/" target="_blank" rel="noopener">Instagram</a><a href="https://community.fabric.microsoft.com/search?q=nayarahellen" target="_blank" rel="noopener">Comunidade do Microsoft Fabric</a><a href="privacidade.html" target="_blank" rel="noopener">Política de privacidade</a></nav>
   </div>
 </footer>
 <script>
