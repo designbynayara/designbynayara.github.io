@@ -391,6 +391,15 @@ function pagina(opcao) {
 <meta name="description" content="${esc(C.descricao)}">
 <meta property="og:title" content="${esc(C.titulo_aba)}">
 <meta property="og:description" content="${esc(C.descricao)}">
+${C.compartilhar ? `<meta property="og:type" content="website">
+<meta property="og:url" content="${esc(C.compartilhar.endereco)}">
+<meta property="og:locale" content="${esc(C.compartilhar.idioma)}">
+<meta property="og:image" content="${esc(C.compartilhar.imagem)}">
+<meta property="og:image:width" content="${C.compartilhar.largura}">
+<meta property="og:image:height" content="${C.compartilhar.altura}">
+<meta property="og:image:alt" content="${esc(C.compartilhar.alt)}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="${esc(C.compartilhar.endereco)}">` : ''}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap">
 <style>${CSS}</style>

@@ -1,6 +1,14 @@
 {
   "titulo_aba": "Nayara Hellen · Consultoria de Power BI e Fabric",
   "descricao": "Consultoria de Power BI e Microsoft Fabric. Conte sobre o seu projeto em cerca de 3 minutos.",
+  "compartilhar": {
+    "endereco": "https://designbynayara.github.io/",
+    "imagem": "https://designbynayara.github.io/imagens/previa-link.jpg",
+    "largura": 1200,
+    "altura": 630,
+    "alt": "Nayara Hellen, consultoria de Power BI e Fabric, com um relatório de pronto-socorro ao lado",
+    "idioma": "pt_BR"
+  },
   "pessoa": {
     "nome": "Nayara Hellen",
     "arroba": "@designby_nayara",
