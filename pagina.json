@@ -32,13 +32,6 @@
     "texto": "Todos os relatórios abaixo usam dados fictícios.",
     "itens": [
       {
-        "nome": "Assinaturas de café especial",
-        "texto": "Receita recorrente, assinantes e cancelamentos mês a mês.",
-        "imagem": "imagens/grao-raro.webp",
-        "alt": "Visão geral de um relatório de assinaturas de café, com cartões de receita e assinantes e gráficos por mês",
-        "link": "https://community.fabric.microsoft.com/discussions/datastoriesgallery/gr%C3%A3o-raro-assinaturas-de-caf%C3%A9-especial/5374430"
-      },
-      {
         "nome": "Operação de pronto-socorro",
         "texto": "Fluxo de pacientes, triagem e simulador de plantão.",
         "imagem": "imagens/pronto-socorro.webp",
@@ -72,6 +65,13 @@
         "imagem": "imagens/gestao-de-clientes.webp",
         "alt": "Visão geral de um relatório de clientes de uma transportadora, com receita por cliente, nível de serviço e clientes por porte",
         "link": "https://community.fabric.microsoft.com/discussions/DataStoriesGallery/gest%C3%A3o-de-clientes-carteira-de-uma-opera%C3%A7%C3%A3o-de-log%C3%ADstica/5419716"
+      },
+      {
+        "nome": "Assinaturas de café especial",
+        "texto": "Receita recorrente, assinantes e cancelamentos mês a mês.",
+        "imagem": "imagens/grao-raro.webp",
+        "alt": "Visão geral de um relatório de assinaturas de café, com cartões de receita e assinantes e gráficos por mês",
+        "link": "https://community.fabric.microsoft.com/discussions/datastoriesgallery/gr%C3%A3o-raro-assinaturas-de-caf%C3%A9-especial/5374430"
       }
     ],
     "link_mais": "Ver mais relatórios na Comunidade do Microsoft Fabric"
